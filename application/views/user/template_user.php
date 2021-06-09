@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Top Navigation</title>
+  <title>Do Ponic | Asik Bertani</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -37,7 +37,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="<?=base_url()?>assets/index2.html" class="navbar-brand"><b>Do</b>Ponic</a>
+          <a href="#" class="navbar-brand"><b>Do</b>Ponic</a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -46,18 +46,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li class="divider"></li>
                 <li><a href="#">Article</a></li>
-                <li><a href="#">Sell</a></li>
-                <li><a href="#">Something else here</a></li>
                 <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">Product</a></li>
               </ul>
             </li>
           </ul>
@@ -87,24 +84,24 @@
                       <a href="#">
                         <div class="pull-left">
                           <!-- User Image -->
-                          <img src="<?=base_url()?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                          <img src="<?=base_url()?>assets/dist/img/user.png" class="img-circle" alt="User Image">
                         </div>
                         <!-- Message title and timestamp -->
                         <h4>
-                          Support Team
+                          Cangkul
                             <div class="pull-right">
                                 <i class="fa fa-close"></i>
                             </div>
                         </h4>
                         <!-- The message -->
-                        <p>Why not buy a new awesome theme?</p>
+                        <p></p>
                       </a>
                     </li>
                     <!-- end message -->
                   </ul>
                   <!-- /.menu -->
                 </li>
-                <li class="footer"><a href="#">See All Messages</a></li>
+                <li class="footer"><a href="#">See More</a></li>
               </ul>
             </li>
             <!-- User Account Menu -->
