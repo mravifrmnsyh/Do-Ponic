@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 				}else{
 					echo "<script>
 					alert('Selamat, Login Berhasil');
-					window.location='".site_url('user_dashboard')."';
+					window.location='".site_url('index')."';
 					</script>";
 				}
 			} else{

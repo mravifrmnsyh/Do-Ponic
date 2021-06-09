@@ -1,11 +1,4 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-    <h1>
-        Home
-        <small></small>
-    </h1>
-    </section>
-    
+   
     <section class="content">
         <div class="box box-default">
             <div class="box-header with-border">
@@ -23,7 +16,7 @@
         <div class="col-md-6">
             <div class="box box-solid">
                 <div class="box-header with-border">
-                <h3 class="box-title">Do Ponic</h3>
+                <h3 class="box-title">Sub-Topics</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
