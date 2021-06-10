@@ -66,8 +66,13 @@
 				<div class="text">
 					<span class="text-muted">Welcome!</span>
 					<div> 
-						<a href="#">Sign in</a> |  
-						<a href="#"> Register</a>
+            <?php if($this->fungsi->user_login() == null) { ?>
+              <a href="<?=site_url('auth/login')?>">Sign in</a> |  
+              <a href="#"> Register</a>
+            <?php }else{ ?>
+              <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
+              <a href="<?=site_url('auth/logout')?>"> Log out</a>
+            <?php }?>
 					</div>
 				</div>
 			</div>

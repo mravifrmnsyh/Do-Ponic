@@ -29,7 +29,7 @@ class Auth extends CI_Controller {
 				}else{
 					echo "<script>
 					alert('Selamat, Login Berhasil');
-					window.location='".site_url('index')."';
+					window.location='".site_url('user_dashboard')."';
 					</script>";
 				}
 			} else{
@@ -48,7 +48,6 @@ class Auth extends CI_Controller {
 			'level' => 2
 		);
 		$this->session->set_userdata($params);
-		// $this->session->sess_destroy();
 		redirect('user_dashboard');
 	}
 }
