@@ -38,20 +38,9 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="#" class="nav-link">Home</a></li>
-	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="">Shop</a>
-              	<a class="dropdown-item" href="#">Wishlist</a>
-                <a class="dropdown-item" href="#">Single Product</a>
-                <a class="dropdown-item" href="#">Cart</a>
-                <a class="dropdown-item" href="#">Checkout</a>
-              </div>
-            </li>
-	          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Mitra</a></li>
+	          <li class="nav-item"><a href="#" class="nav-link">Katalog</a></li>
 	          <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
                 <li>
             <li class="dropdown user user-menu">
@@ -91,6 +80,40 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
+
+    <section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-md-12 ftco-animate text-center">
+                <h1 class="mb-2">Mulai Menanam</h1>
+                <h2 class="subheading mb-4">Banyak cara yang dapat digunakan untuk menanam sayur dan buah, bahkan dipekarangan rumah yang minim.</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-sm-12 ftco-animate text-center">
+                <h1 class="mb-2">Tau kah Anda?</h1>
+                <h2 class="subheading mb-4">Bahwa sayur dan buah dapat di tanam di lahan minim</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <hr>
 
     <div class="content-wrapper">
       <div class="container">

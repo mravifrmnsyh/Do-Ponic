@@ -1,86 +1,182 @@
    
-    <section class="content">
-        <div class="box box-default">
-            <div class="box-header with-border">
-            <h3 class="box-title">Do Ponic</h3>
-            </div>
-            <div class="box-body">
-                <p style="text-align:justify;">
-                    Do Ponic adalah Media Digital yang menyediakan produk berkebun untuk lahan sempit disertai dengan tata cara berkebun menarik. Do Ponic sendiri di ambil dari kata hidroponik. Meskipun disini hidroponik ialah metode menanam dengan memanfaatkan air, disini Do Ponic tidak hanya membahas tentang tanaman air saja, mulai dari pertanian, bonsai, produk-produk berkebun, serta masih banyak lainnya.
-                </p>
-                <p style="text-align:justify;">
-                    
-                </p>
-            </div>
+
+       
+
+
+      <section class="ftco-section ftco-category ftco-no-pt">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8">
+                      <div class="row">
+                          <div class="col-md-6 order-md-last align-items-stretch d-flex">
+                              <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                                  <div class="text text-center">
+                                      <h2>Katalog</h2>
+                                      <p>Beberapa Katalog mulai dari alat hingga bibit untuk menanam</p>
+                                      <p><a href="#" class="btn btn-primary">Belanja Sekarang</a></p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                                  <div class="text px-3 py-1">
+                                      <h2 class="mb-0"><a href="#">Makanan Olahan</a></h2>
+                                  </div>
+                              </div>
+                              <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                                  <div class="text px-3 py-1">
+                                      <h2 class="mb-0"><a href="#">Alat Tanam</a></h2>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="col-md-4">
+                      <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                          <div class="text px-3 py-1">
+                              <h2 class="mb-0"><a href="#">Bibit</a></h2>
+                          </div>		
+                      </div>
+                      <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                          <div class="text px-3 py-1">
+                              <h2 class="mb-0"><a href="#">Sayur dan Buah</a></h2>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+  <section class="ftco-section">
+      <div class="container">
+              <div class="row justify-content-center mb-3 pb-3">
+        <div class="col-md-12 heading-section text-center ftco-animate">
+            <span class="subheading">Produk Pilihan</span>
+          <h2 class="mb-4">Beberapa Produk Rujukan</h2>
+          <p>Produk peralatan kebun, bibit buah dan sayuran, buah dan sayur hingga hasil olahan</p>
         </div>
-        <div class="col-md-6">
-            <div class="box box-solid">
-                <div class="box-header with-border">
-                <h3 class="box-title">Sub-Topics</h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                <div class="box-group" id="accordion">
-                    <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
-                    <div class="panel box box-primary">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">
-                        Hidroponik
-                        </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
-                        <div class="box-body">
-                        <p style="text-align:justify;">
-                            Hidroponik (bahasa Inggris: hydroponic) adalah salah satu metode dalam budidaya menanam dengan memanfaatkan air tanpa menggunakan media tanah dengan menekankan pada pemenuhan kebutuhan hara nutrisi bagi tanaman. Kebutuhan air pada hidroponik lebih sedikit daripada kebutuhan air pada budidaya dengan tanah. Hidroponik menggunakan air yang lebih efisien, jadi cocok diterapkan pada daerah yang memiliki pasokan air yang terbatas.
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="panel box box-danger">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed" aria-expanded="false">
-                            Etimologi
-                        </a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
-                        <div class="box-body">
-                        <p style="text-align:justify;">
-                            Hidroponik berasal dari kata Yunani yaitu hydro yang berarti air dan ponos yang artinya daya. Hidroponik juga dikenal sebagai soilless culture atau budidaya tanaman tanpa tanah. Jadi hidroponik berarti budidaya tanaman yang memanfaatkan air dan tanpa menggunakan tanah sebagai media tanam atau soilless.
-                        </p>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="panel box box-success">
-                    <div class="box-header with-border">
-                        <h4 class="box-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed" aria-expanded="false">
-                            Metode
-                        </a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
-                        <div class="box-body">
-                            <p style="text-align:justify;">
-                                Dalam kajian bahasa, hidroponik berasal dari kata hydro yang berarti air dan ponos yang berarti kerja. Jadi, hidroponik memiliki pengertian secara bebas teknik bercocok tanam dengan menekankan pada pemenuhan kebutuhan nutrisi bagi tanaman, atau dalam pengertian sehari-hari bercocok tanam tanpa tanah. Dari pengertian ini terlihat bahwa munculnya teknik bertanam secara hidroponik diawali oleh semakin tingginya perhatian manusia akan pentingnya kebutuhan pupuk bagi tanaman.
-                            </p>
-                            <p style="text-align:justify;">
-                                Di mana pun tumbuhnya sebuah tanaman akan tetap dapat tumbuh dengan baik apabila nutrisi (unsur hara) yang dibutuhkan selalu tercukupi. Dalam konteks ini fungsi dari tanah adalah untuk penyangga tanaman dan air yang ada merupakan pelarut nutrisi, untuk kemudian bisa diserap tanaman. Pola pikir inilah yang akhirnya melahirkan teknik bertanam dengan hidroponik, di mana yang ditekankan adalah pemenuhan kebutuhan nutrisi.
-                            </p>
-                            <p style="text-align:justify;">
-                                Sistem hidroponik bisa digunakan untuk mengatasi masalah kekurangan lahan yang semakin tahun semakin sempit. Diharapkan hidroponik mampu menjadi manfaat untuk masa depan karena mampu diberdayakan dalam kondisi lahan sempit.
-                            </p>
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-                <!-- /.box-body -->
-            </div>
-            <!-- /.box -->
-            </div>
-    </section>
+      </div>   		
+      </div>
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 col-lg-3 ftco-animate">
+                  <div class="product">
+                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
+                          <span class="status">30%</span>
+                          <div class="overlay"></div>
+                      </a>
+                      <div class="text py-3 pb-4 px-3 text-center">
+                          <h3><a href="#">Tomat</a></h3>
+                          <div class="d-flex">
+                              <div class="pricing">
+                                  <p class="price"><span class="mr-2 price-dc">Rp. 15.000,00-</span><span class="price-sale">Rp. 8.000,00-</span></p>
+                              </div>
+                          </div>
+                          <div class="bottom-area d-flex px-3">
+                              <div class="m-auto d-flex">
+                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                      <span><i class="ion-ios-menu"></i></span>
+                                  </a>
+                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                      <span><i class="ion-ios-cart"></i></span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 ftco-animate">
+                  <div class="product">
+                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
+                          <div class="overlay"></div>
+                      </a>
+                      <div class="text py-3 pb-4 px-3 text-center">
+                          <h3><a href="#">Terong Ungu</a></h3>
+                          <div class="d-flex">
+                              <div class="pricing">
+                                  <p class="price"><span>Rp. 7.000,00-</span></p>
+                              </div>
+                          </div>
+                          <div class="bottom-area d-flex px-3">
+                              <div class="m-auto d-flex">
+                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                      <span><i class="ion-ios-menu"></i></span>
+                                  </a>
+                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                      <span><i class="ion-ios-cart"></i></span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 ftco-animate">
+                  <div class="product">
+                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
+                          <div class="overlay"></div>
+                      </a>
+                      <div class="text py-3 pb-4 px-3 text-center">
+                          <h3><a href="#">Kankung</a></h3>
+                          <div class="d-flex">
+                              <div class="pricing">
+                                  <p class="price"><span>Rp. 5.000,00-</span></p>
+                              </div>
+                          </div>
+                          <div class="bottom-area d-flex px-3">
+                              <div class="m-auto d-flex">
+                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                      <span><i class="ion-ios-menu"></i></span>
+                                  </a>
+                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                      <span><i class="ion-ios-cart"></i></span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6 col-lg-3 ftco-animate">
+                  <div class="product">
+                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
+                          <div class="overlay"></div>
+                      </a>
+                      <div class="text py-3 pb-4 px-3 text-center">
+                          <h3><a href="#">Bubuk Cabe</a></h3>
+                          <div class="d-flex">
+                              <div class="pricing">
+                                  <p class="price"><span>Rp. 10.000,00-</span></p>
+                              </div>
+                          </div>
+                          <div class="bottom-area d-flex px-3">
+                              <div class="m-auto d-flex">
+                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                      <span><i class="ion-ios-menu"></i></span>
+                                  </a>
+                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                      <span><i class="ion-ios-cart"></i></span>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+      
+      <section class="ftco-section img" style="background-image: url(<?=base_url()?>assets/user/img/);">
+      <div class="container">
+              <div class="row justify-content-end">
+        <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
+            <span class="subheading">Promo Spesial</span>
+          <h2 class="mb-4">Deal of the day</h2>
+          <p>Harga khusus untuk produk pilihan do Ponic</p>
+          <h3><a href="#">Paket Tanam</a></h3>
+          <span class="price">Rp. 115.000,00- <a href="#">Sekarang hanya Rp. 35.000,00-</a></span>
+      </div>   		
+      </div>
+  </section>
+
+
 
