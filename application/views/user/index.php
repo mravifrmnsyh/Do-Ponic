@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/magnific-popup.css">
 
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/aos.css">
+    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/ui.css">
 
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/ionicons.min.css">
 
@@ -27,59 +28,54 @@
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/flaticon.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/icomoon.css">
     <link rel="stylesheet" href="<?=base_url()?>assets/user/css/style.css">
+    <link rel="stylesheet" href="https://cedeen.netlify.app/font-awesome-5-pro/css/all.min.css" />
+    
+    
   </head>
   <body class="goto-here">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="#">doPonic</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+  <nav class="navbar navbar-dark navbar-expand p-0 bg-primary">
+<div class="container">
+    <ul class="navbar-nav d-none d-md-flex mr-auto">
+    </ul>
+    <ul class="navbar-nav ">
+		<li  class="nav-item"><a href="#" class="nav-link"> Blog </a></li>
+		<li  class="nav-item"><a href="#" class="nav-link"> Mitra </a></li>
+		<li  class="nav-item"><a href="#" class="nav-link"> Katalog </a></li>  
+		<li  class="nav-item"><a href="#" class="nav-link"> Kontak </a></li>    
+		<li  class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
+	</ul> <!-- list-inline //  -->
+  </div> <!-- navbar-collapse .// -->
+</div> <!-- container //  -->
+</nav> <!-- header-top-light.// -->
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Mitra</a></li>
-	          <li class="nav-item"><a href="#" class="nav-link">Katalog</a></li>
-	          <li class="nav-item cta cta-colored"><a href="#" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
-                <li>
-            <li class="dropdown user user-menu">
-              <!-- Menu Toggle Button -->
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <span class="hidden-xs"><?=$this->fungsi->user_login() == null ? "Login" : ucfirst($this->fungsi->user_login()->username)?></span>
-              </a>
-              <ul class="dropdown-menu">
-                <!-- The user image in the menu -->
-                <li class="user-header">
-                  <img src="<?=base_url()?>assets/dist/img/user.png" class="img-circle" alt="User Image">
-
-                  <p>
-                  <?=$this->fungsi->user_login() == null ? "Login" : ucfirst($this->fungsi->user_login()->username)." - Do Ponic"?> 
-                    <small>Asik Bertani</small>
-                  </p>
-                </li>
-                <!-- Menu Footer-->
-                <li class="user-footer">
-                    <?php if($this->fungsi->user_login() == null) { ?>
-                        <div class="pull-right">
-                        <a href="<?=site_url('auth/login')?>" class="btn btn-default btn-flat">Sign in</a>
-                        </div>
-                    <?php } else {?>
-                        <div class="pull-left">
-                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                        </div>
-                        <div class="pull-right">
-                            <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
-                        </div>
-                    <?php } ?>
-                </li>
-              </ul>
-            </li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+<section class="header-main border-bottom">
+	<div class="container">
+<div class="row align-items-center">
+	<div class="col-lg-2 col-6">
+		<a href="#" class="navbar-brand">do Ponic
+		</a> <!-- brand-wrap.// -->
+	</div>
+	<div class="col-lg-10 col-sm-6 col-12">
+		<div class="widgets-wrap float-md-right">
+			<div class="widget-header  mr-3">
+				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
+				<span class="badge badge-pill badge-danger notify">0</span>
+			</div>
+			<div class="widget-header icontext">
+				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
+				<div class="text">
+					<span class="text-muted">Welcome!</span>
+					<div> 
+						<a href="#">Sign in</a> |  
+						<a href="#"> Register</a>
+					</div>
+				</div>
+			</div>
+		</div> <!-- widgets-wrap.// -->
+	</div> <!-- col.// -->
+</div> <!-- row.// -->
+	</div> <!-- container.// -->
+</section> <!-- header-main .// -->
 
     <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
@@ -112,8 +108,6 @@
         </div>
       </div>
   </section>
-
-  <hr>
 
     <div class="content-wrapper">
       <div class="container">

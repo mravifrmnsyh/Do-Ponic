@@ -1,9 +1,4 @@
-   
-
-       
-
-
-      <section class="ftco-section ftco-category ftco-no-pt">
+       <section class="ftco-section ftco-category ">
           <div class="container">
               <div class="row">
                   <div class="col-md-8">
@@ -18,12 +13,12 @@
                               </div>
                           </div>
                           <div class="col-md-6">
-                              <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                              <div class="category-wrap ftco-animate img mb-4 d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
                                   <div class="text px-3 py-1">
                                       <h2 class="mb-0"><a href="#">Makanan Olahan</a></h2>
                                   </div>
                               </div>
-                              <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                              <div class="category-wrap ftco-animate img d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
                                   <div class="text px-3 py-1">
                                       <h2 class="mb-0"><a href="#">Alat Tanam</a></h2>
                                   </div>
@@ -33,12 +28,12 @@
                   </div>
 
                   <div class="col-md-4">
-                      <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                      <div class="category-wrap ftco-animate img mb-4 d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
                           <div class="text px-3 py-1">
                               <h2 class="mb-0"><a href="#">Bibit</a></h2>
                           </div>		
                       </div>
-                      <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+                      <div class="category-wrap ftco-animate img d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
                           <div class="text px-3 py-1">
                               <h2 class="mb-0"><a href="#">Sayur dan Buah</a></h2>
                           </div>
