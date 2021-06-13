@@ -40,7 +40,7 @@
 		<li  class="nav-item"><a href="#" class="nav-link"> Blog </a></li>
 		<li  class="nav-item"><a href="#" class="nav-link"> Mitra </a></li>
 		<li  class="nav-item"><a href="#" class="nav-link"> Katalog </a></li>  
-		<li  class="nav-item"><a href="#" class="nav-link"> Kontak </a></li>    
+		<li  class="nav-item"><a href="<?=base_url()?>kontak" class="nav-link"> Kontak </a></li>    
 		<li  class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
 	</ul> <!-- list-inline //  -->
   </div> <!-- navbar-collapse .// -->
