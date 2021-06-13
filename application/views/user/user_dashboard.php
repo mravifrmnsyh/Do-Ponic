@@ -1,87 +1,31 @@
-<section id="home-section" class="hero">
-        <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
-            <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+        <section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/logo.png);">
+					</div>
+					<div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
+	          <div class="heading-section-bold mb-4 mt-md-5">
+	          	<div class="ml-md-0">
+		            <h2 class="mb-4">do Ponic - Komunitas Tani</h2>
+	            </div>
+	          </div>
+	          <div class="pb-md-5">
+	          	<p>do Ponic adalah komunitas pertanian yang bertujuan untuk memajukan pertanian di Indonesia dan sebagai upaya menghasilkan hasil pertanian yang berkualitas tinggi.</p>
+							<p>Sebagai bentuk upaya kami dalam mewujudkan tujuan tersebut, kami berusaha untuk memberikan cara pengelolaan hingga mendistribusikan hasil pertanian berkualitas tinggi ke seluruh Indonesia.</p>
+                            <p>Selain itu, do Ponic berupaya mengembangkan sistem sebagai layanan petani untuk menjual dan mendistribusikan hasil produk mereka ke seluruh Indonesia dengan memberikan fitur jual beli.</p>
+							<p>Selain produk mentah, komunitas kami memberikan cara pengelolaan hasil pertanian menjadi produk matang seperti makanan atau produk lain.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-              <div class="col-md-12 ftco-animate text-center">
-                <h1 class="mb-2">Mulai Menanam</h1>
-                <h2 class="subheading mb-4">Banyak cara yang dapat digunakan untuk menanam sayur dan buah, bahkan dipekarangan rumah yang minim.</h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
-            <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-              <div class="col-sm-12 ftco-animate text-center">
-                <h1 class="mb-2">Tau kah Anda?</h1>
-                <h2 class="subheading mb-4">Bahwa sayur dan buah dapat di tanam di lahan minim</h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
-  
-       <section class="ftco-section ftco-category ">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-8">
-                      <div class="row">
-                          <div class="col-md-6 order-md-last align-items-stretch d-flex">
-                              <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
-                                  <div class="text text-center">
-                                      <h2>Katalog</h2>
-                                      <p>Beberapa Katalog mulai dari alat hingga bibit untuk menanam</p>
-                                      <p><a href="#" class="btn btn-primary">Belanja Sekarang</a></p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="category-wrap ftco-animate img mb-4 d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
-                                  <div class="text px-3 py-1">
-                                      <h2 class="mb-0"><a href="#">Makanan Olahan</a></h2>
-                                  </div>
-                              </div>
-                              <div class="category-wrap ftco-animate img d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
-                                  <div class="text px-3 py-1">
-                                      <h2 class="mb-0"><a href="#">Alat Tanam</a></h2>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col-md-4">
-                      <div class="category-wrap ftco-animate img mb-4 d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
-                          <div class="text px-3 py-1">
-                              <h2 class="mb-0"><a href="#">Bibit</a></h2>
-                          </div>		
-                      </div>
-                      <div class="category-wrap ftco-animate img d-flex align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
-                          <div class="text px-3 py-1">
-                              <h2 class="mb-0"><a href="#">Sayur dan Buah</a></h2>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-  <section class="ftco-section">
+    <section class="ftco-section">
       <div class="container">
               <div class="row justify-content-center mb-3 pb-3">
         <div class="col-md-12 heading-section text-center ftco-animate">
             <span class="subheading">Produk Pilihan</span>
-          <h2 class="mb-4">Beberapa Produk Rujukan</h2>
-          <p>Produk peralatan kebun, bibit buah dan sayuran, buah dan sayur hingga hasil olahan</p>
+          <h4>Produk peralatan kebun, bibit buah dan sayuran, buah dan sayur hingga hasil olahan</h4>
         </div>
       </div>   		
       </div>

@@ -52,7 +52,7 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-6">
-		<a href="#" class="navbar-brand">do Ponic
+		<a href="<?=base_url()?>" class="navbar-brand">do Ponic
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-10 col-sm-6 col-12">
@@ -82,6 +82,55 @@
 	</div> <!-- container.// -->
 </section> <!-- header-main .// -->
 
+<section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-6.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-md-12 ftco-animate text-center">
+                <h1 class="mb-2">Semua Orang dapat Menanam</h1>
+                <h2 class="subheading mb-4">Anda dapat memulai di lahan minim pekarangan rumah</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-5.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-sm-12 ftco-animate text-center">
+                <h1 class="mb-2">Hasilkan Produk Pertanian</h1>
+                <h2 class="subheading mb-4">Sayur dan buah dapat dihasilkan di lahan minim</h2>
+              </div>
+
+              </div>
+          </div>
+        </div>
+
+              <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-sm-12 ftco-animate text-center">
+                <h1 class="mb-2">Anda dapat Menjual di do Ponic</h1>
+                <h2 class="subheading mb-4">Kami dapat membantu menjual produk Anda</h2>
+
+                </div>
+          </div>
+        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+    
 
 
     <div class="content-wrapper">

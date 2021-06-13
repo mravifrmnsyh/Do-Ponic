@@ -51,7 +51,7 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-6">
-		<a href="#" class="navbar-brand">do Ponic
+		<a href="<?=base_url()?>" class="navbar-brand">do Ponic
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-10 col-sm-6 col-12">
