@@ -84,11 +84,12 @@
     <div class="hold-transition">
         <div class="login-box">
             <div class="login-logo">
-                <a>Do<b>Ponic</b> - DPC</a>
+              <img src="<?=base_url()?>assets/user/img/logo.png" class="rounded" width="150px">
+                <!-- <a>Do<b>Ponic</b> - DPC</a> -->
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Masuk dengan akun Anda untuk menjalankan fitur</p>
 
                 <form action="<?=site_url('auth/process')?>" method="post">
                 <div class="form-group has-feedback">
@@ -102,7 +103,7 @@
                 <div class="row">
                     <div class="col-xs-8"></div>
                     <div class="col-xs-4">
-                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Masuk</button>
                     </div>
                     <!-- /.col -->
                 </div>
