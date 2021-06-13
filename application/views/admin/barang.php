@@ -43,7 +43,7 @@
                                 <td><?=$data->harga?></td>
                                 <td><?=$data->stok?></td>
                                 <td class="text-center" width="150px">
-                                    <a href="<?=site_url('barang/edit/'.$data->id_brg)?>" class="btn btn-success btn-xs">
+                                    <a href="<?=site_url('barang/ubah/'.$data->id_brg)?>" class="btn btn-success btn-xs">
                                         <i class="fa fa-pencil"> Edit</i>
                                     </a> | 
                                     <a href="<?=site_url('barang/hapus/'.$data->id_brg)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
