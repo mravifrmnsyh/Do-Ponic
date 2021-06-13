@@ -781,7 +781,7 @@ ul.row, ul.row-sm {
   margin-bottom: 7px;
 }
 .list-normal li:before {
-  content: "•";
+  content: "ï¿½";
   color: #3167eb;
   display: inline-block;
   width: 1em;
@@ -1245,7 +1245,7 @@ a[class*=card]:hover .title {
   margin-left: 0px;
 }
 .menu-category .has-submenu > a:after {
-  content: "›";
+  content: "ï¿½";
   font-size: 24px;
   color: #999;
   line-height: 18px;
