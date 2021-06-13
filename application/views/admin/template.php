@@ -135,19 +135,11 @@
             </span>
           </a>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-archive"></i>
-            <span>Products</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
+        <li>
+          <a href="<?=site_url('barang')?>">
+            <i class="fa fa-archive"></i> <span>Barang</span>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Categories</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Unit</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Items</a></li>
-          </ul>
         </li>
 		<li class="treeview">
           <a href="#">
