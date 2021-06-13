@@ -35,12 +35,6 @@ class Barang extends CI_Controller {
 		$barang->stok = null;
 		$barang->gambar = null;
 
-		if ($barang->gambar=''){
-			echo "eror";
-		} else {
-			
-			
-		} 
 		$data = array(
 			'page' => 'tambah',
 			'row' => $barang

@@ -9,6 +9,10 @@ class Auth extends CI_Controller {
 		$this->load->view('login');
 	}
 
+	public function register(){
+		$this->load->view('user/register');
+	}
+
 	public function process(){
 		$post = $this->input->post(null, TRUE);
 		if(isset($_POST['login'])){
@@ -36,6 +40,27 @@ class Auth extends CI_Controller {
 				echo "<script>
 					alert('Login Gagal, Username / Password Salah');
 					window.location='".site_url('auth/login')."';
+				</script>";
+			}
+		} else if(isset($_POST['register'])){
+			$this->load->model('user_model');
+			$post['level'] = '2';
+			$config['upload_path']          = './assets/gambar/user';
+			$config['allowed_types']        = 'jpeg|jpg|png';
+			$config['max_size']             = 2048;
+			$this->load->library('upload', $config);
+
+			if($this->upload->do_upload('foto')){
+				$post['foto'] = $this->upload->data('file_name');
+				$this->user_model->add($post);
+				echo "<script>
+				alert('Selamat, Register Berhasil');
+				window.location='".site_url('auth/login')."';
+				</script>";
+			}else{
+				echo "<script>
+				alert('Gagal register');
+				window.location='".site_url('auth/register')."';
 				</script>";
 			}
 		}

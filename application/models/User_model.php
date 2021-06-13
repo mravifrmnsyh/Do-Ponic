@@ -12,6 +12,12 @@ class User_model extends CI_Model {
         return $query;
     }
 
+    public function regist(){
+        $this->db->select('*');
+        $this->db->from('tb_pengguna');
+        
+    }
+
     public function get($id = null){
         $this->db->from('tb_pengguna');
         if($id != null){

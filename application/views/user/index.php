@@ -68,7 +68,7 @@
 					<div> 
             <?php if($this->fungsi->user_login() == null) { ?>
               <a href="<?=site_url('auth/login')?>">Masuk</a> |  
-              <a href="#"> Daftar</a>
+              <a href="<?=site_url('auth/register')?>"> Daftar</a>
             <?php }else{ ?>
               <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
               <a href="<?=site_url('auth/logout')?>"> Keluar</a>
