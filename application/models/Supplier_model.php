@@ -38,4 +38,13 @@ class Supplier_model extends CI_Model {
         $this->db->update('tb_supplier', $params);
     }
 
+    public function jumlahSup(){
+        $query = $this->db->get('tb_supplier');
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        } else {
+            return 0;
+        } 
+    }
+
 }

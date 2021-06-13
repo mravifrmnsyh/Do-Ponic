@@ -51,6 +51,10 @@ class User_model extends CI_Model {
 
     public function jumlahUser(){
         $query = $this->db->get('tb_pengguna');
-        
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        } else {
+            return 0;
+        } 
     }
 }

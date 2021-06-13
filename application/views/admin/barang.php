@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>NO</th>
+                            <th>ID</th>
                             <th>NAMA BARANG</th>
                             <th>KETERANGAN</th>
                             <th>KATEGORI</th>

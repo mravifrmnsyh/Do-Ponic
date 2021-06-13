@@ -73,4 +73,13 @@ class Barang_model extends CI_Model {
         return $this->db->get()->result();
         return $this->db->get_where("tb_barang",array('nama_brg' => $keyword));
     }
+
+    public function jumlahBrg(){
+        $query = $this->db->get('tb_barang');
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        } else {
+            return 0;
+        } 
+    }
 }

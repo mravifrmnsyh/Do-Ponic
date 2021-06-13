@@ -104,6 +104,6 @@ class Users extends CI_Controller {
 
 	public function jumlah(){
 		$data['total'] = $this->user_model->jumlahUser();
-		$this->template->load('admin/dashboard', $data);
+		$this->template->load('', 'admin/dashboard', $data);
 	}
 }
