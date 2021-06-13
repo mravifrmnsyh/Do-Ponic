@@ -29,6 +29,7 @@
                             <th>Nama</th>
                             <th>Alamat</th>
                             <th>Level</th>
+                            <th>Foto</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -43,6 +44,11 @@
                                 <td><?=$data->nama?></td>
                                 <td><?=$data->alamat?></td>
                                 <td><?=$data->level == 1 ? "Admin" : "User"?></td> <!-- if else satu baris -->
+                                <td>
+                                    <?php if($data->foto != null){?>
+                                        <img src="<?=base_url(); ?>assets/gambar/user/<?=$data->foto;?>" width="90" height="100" alt="">
+                                    <?php }?>
+                                </td>
                                 <td class="text-center" width="150px">
                                     <form action="<?=site_url('users/hapus')?>" method="post">
                                         <a href="<?=site_url('users/ubah/'.$data->id_user)?>" class="btn btn-success btn-xs">

@@ -21,7 +21,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <form action="" class="" method="post">
+                        <?php echo form_open_multipart('users/ubah/'.$row->id_user);?>
                             <div class="form-group">
                                 <label for="">Id User</label>
                                 <input type="text" name="id_user" readonly value="<?=$this->input->post('id_user') ?? $row->id_user?>" class="form-control">
@@ -60,10 +60,19 @@
                                 <?=form_error('level')?>
                             </div>
                             <div class="form-group">
+                                <label>Foto</label><br>
+                                <?php if($row->foto != null){ ?>
+                                        <div style="margin-bottom:5px">
+                                        <img src="<?=base_url(); ?>assets/gambar/user/<?=$row->foto;?>" style="width:50%">
+                                        </div>
+                                <?php }?>
+                                <input type="file" name="foto" class="form-control" size="20">
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-flat">Simpan</button>
                                 <button type="reset" class="btn btn-danger btn-flat">Reset</button>
                             </div>
-                        </form>
+                        <?php echo form_close()?>
                     </div>
                 </div>
             </div>
