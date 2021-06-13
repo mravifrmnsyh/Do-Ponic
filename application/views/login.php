@@ -100,13 +100,21 @@
                     <input type="password" name="password" class="form-control" placeholder="Password" required>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
-                <div class="row">
-                    <div class="col-xs-8"></div>
-                    <div class="col-xs-4">
-                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Masuk</button>
+
+                    <div class="row">
+                    <div class="col-8">
+                      <div class="icheck-primary">
+                        <label>Belum punya akun?</label>
+                        <label><a href="">Daftar di sini</a>
+            </label>
+                      </div>
                     </div>
                     <!-- /.col -->
-                </div>
+                    <div class="col-4">
+                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Masuk</button>
+              </div>
+              <!-- /.col -->
+            </div>
                 </form>
             </div>
             <!-- /.login-box-body -->
