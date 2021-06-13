@@ -51,7 +51,7 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-6">
-		<a href="#" class="navbar-brand">do Ponic
+		<a href="<?=base_url()?>" class="navbar-brand">do Ponic
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-10 col-sm-6 col-12">
@@ -84,11 +84,12 @@
     <div class="hold-transition">
         <div class="login-box">
             <div class="login-logo">
-                <a>Do<b>Ponic</b> - DPC</a>
+              <img src="<?=base_url()?>assets/user/img/logo.png" class="rounded" width="150px">
+                <!-- <a>Do<b>Ponic</b> - DPC</a> -->
             </div>
             <!-- /.login-logo -->
             <div class="login-box-body">
-                <p class="login-box-msg">Sign in to start your session</p>
+                <p class="login-box-msg">Masuk dengan akun Anda untuk menjalankan fitur</p>
 
                 <form action="<?=site_url('auth/process')?>" method="post">
                 <div class="form-group has-feedback">
@@ -99,13 +100,21 @@
                     <input type="password" name="password" class="form-control" placeholder="Password" required>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
-                <div class="row">
-                    <div class="col-xs-8"></div>
-                    <div class="col-xs-4">
-                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Sign In</button>
+
+                    <div class="row">
+                    <div class="col-8">
+                      <div class="icheck-primary">
+                        <label>Belum punya akun?</label>
+                        <label><a href="">Daftar di sini</a>
+            </label>
+                      </div>
                     </div>
                     <!-- /.col -->
-                </div>
+                    <div class="col-4">
+                    <button type="submit" name="login" class="btn btn-primary btn-block btn-flat">Masuk</button>
+              </div>
+              <!-- /.col -->
+            </div>
                 </form>
             </div>
             <!-- /.login-box-body -->
