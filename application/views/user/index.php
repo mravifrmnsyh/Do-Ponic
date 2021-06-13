@@ -64,14 +64,14 @@
 			<div class="widget-header icontext">
 				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
 				<div class="text">
-					<span class="text-muted">Welcome!</span>
+					<span class="text-muted">Selamat Datang!</span>
 					<div> 
             <?php if($this->fungsi->user_login() == null) { ?>
-              <a href="<?=site_url('auth/login')?>">Sign in</a> |  
-              <a href="#"> Register</a>
+              <a href="<?=site_url('auth/login')?>">Masuk</a> |  
+              <a href="#"> Daftar</a>
             <?php }else{ ?>
               <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
-              <a href="<?=site_url('auth/logout')?>"> Log out</a>
+              <a href="<?=site_url('auth/logout')?>"> Keluar</a>
             <?php }?>
 					</div>
 				</div>
@@ -82,37 +82,7 @@
 	</div> <!-- container.// -->
 </section> <!-- header-main .// -->
 
-    <section id="home-section" class="hero">
-        <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
-            <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
-              <div class="col-md-12 ftco-animate text-center">
-                <h1 class="mb-2">Mulai Menanam</h1>
-                <h2 class="subheading mb-4">Banyak cara yang dapat digunakan untuk menanam sayur dan buah, bahkan dipekarangan rumah yang minim.</h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
-            <div class="overlay"></div>
-          <div class="container">
-            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
-
-              <div class="col-sm-12 ftco-animate text-center">
-                <h1 class="mb-2">Tau kah Anda?</h1>
-                <h2 class="subheading mb-4">Bahwa sayur dan buah dapat di tanam di lahan minim</h2>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
 
     <div class="content-wrapper">
       <div class="container">

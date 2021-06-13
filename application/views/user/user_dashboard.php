@@ -1,3 +1,35 @@
+<section id="home-section" class="hero">
+        <div class="home-slider owl-carousel">
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-md-12 ftco-animate text-center">
+                <h1 class="mb-2">Mulai Menanam</h1>
+                <h2 class="subheading mb-4">Banyak cara yang dapat digunakan untuk menanam sayur dan buah, bahkan dipekarangan rumah yang minim.</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+            <div class="overlay"></div>
+          <div class="container">
+            <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+              <div class="col-sm-12 ftco-animate text-center">
+                <h1 class="mb-2">Tau kah Anda?</h1>
+                <h2 class="subheading mb-4">Bahwa sayur dan buah dapat di tanam di lahan minim</h2>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  
        <section class="ftco-section ftco-category ">
           <div class="container">
               <div class="row">
