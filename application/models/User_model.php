@@ -27,7 +27,8 @@ class User_model extends CI_Model {
             'username' => $post['username'],
             'password' => $post['password'],
             'alamat' => $post['alamat'],
-            'level' => $post['level']
+            'level' => $post['level'],
+            'foto'  => $post['foto']
         );
         $this->db->insert('tb_pengguna', $params);
     }
@@ -45,6 +46,9 @@ class User_model extends CI_Model {
         }
         $params['alamat'] = $post['alamat'] != "" ? $post['alamat'] : null;
         $params['level'] = $post['level'];
+        if($post['foto'] != null){
+            $params['foto'] = $post['foto'];
+        }
 		$this->db->where('id_user', $post['id_user']);
         $this->db->update('tb_pengguna', $params);
     }

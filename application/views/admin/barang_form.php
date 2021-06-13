@@ -21,7 +21,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
-                        <form action="<?=site_url('barang/proses')?>" class="" method="post">
+                        <?php echo form_open_multipart('barang/proses');?>
                             <div class="form-group">
                                 <label for="">Id Barang</label>
                                 <input type="text" name="id_brg" readonly value="<?=$row->id_brg?>" class="form-control">
@@ -53,15 +53,20 @@
 
                             <div class="form-group">
                                 <label>Gambar Produk</label><br>
-                                <input type="file" name="gambar" value="<?=$row->gambar?>"class="form-control">
+                                <?php if($page =='ubah'){
+                                    if($row->gambar != null){ ?>
+                                        <div style="margin-bottom:5px">
+                                        <img src="<?=base_url(); ?>assets/gambar/barang/<?=$row->gambar;?>" style="width:50%">
+                                        </div>
+                                <?php }
+                                }?>
+                                <input type="file" name="gambar" class="form-control" size="20">
                             </div>
-
-                        </div>
                         <div class="modal-footer">
                             <button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
                             <button type="submit" name="<?=$page?>" class="btn btn-primary">Simpan</button>
                         </div>
-                        </form>
+                        <?php echo form_close()?>
                     </div>
                 </div>
             </div>

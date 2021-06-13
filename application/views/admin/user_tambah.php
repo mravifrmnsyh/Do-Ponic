@@ -55,6 +55,10 @@
                                 <?=form_error('level')?>
                             </div>
                             <div class="form-group">
+                                <label for="">Foto</label>
+                                <input type="file" name="foto" class="form-control" size="20">
+                            </div>
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success btn-flat">Simpan</button>
                                 <button type="reset" class="btn btn-danger btn-flat">Reset</button>
                             </div>

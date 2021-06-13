@@ -33,6 +33,14 @@ class Barang extends CI_Controller {
 		$barang->kategori = null;
 		$barang->harga = null;
 		$barang->stok = null;
+		$barang->gambar = null;
+
+		if ($barang->gambar=''){
+			echo "eror";
+		} else {
+			
+			
+		} 
 		$data = array(
 			'page' => 'tambah',
 			'row' => $barang
@@ -56,11 +64,32 @@ class Barang extends CI_Controller {
 	}
 
 	public function proses(){
+		$config['upload_path']          = './assets/gambar/barang';
+		$config['allowed_types']        = 'jpeg|jpg|png';
+		$config['max_size']             = 2048;
+		$this->load->library('upload', $config);
+		
 		$post = $this->input->post(null, TRUE);
 		if(isset($_POST['tambah'])){
-			$this->barang_model->add($post);
+			if($this->upload->do_upload('gambar')){
+				$post['gambar'] = $this->upload->data('file_name');
+				$this->barang_model->add($post);
+			}else{
+				echo "upload gagal";
+			}
 		}else if(isset($_POST['ubah'])){
-			$this->barang_model->edit($post);
+			if($this->upload->do_upload('gambar')){
+				$item = $this->barang_model->get($post['id_brg'])->row();
+				if($item->gambar != null){
+					$target_file = './assets/gambar/barang/'.$item->gambar;
+					unlink($target_file);
+				}
+
+				$post['gambar'] = $this->upload->data('file_name');
+				$this->barang_model->edit($post);
+			}else{
+				echo "upload gagal";
+			}
 		} 
 		if($this->db->affected_rows()>0){
 			echo "<script>alert('Data Berhasil Disimpan');</script>";

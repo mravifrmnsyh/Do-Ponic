@@ -29,6 +29,7 @@
                             <th>KATEGORI</th>
                             <th>HARGA</th>
                             <th>STOK</th>
+                            <th>GAMBAR</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -43,6 +44,11 @@
                                 <td><?=$data->kategori?></td>
                                 <td><?=$data->harga?></td>
                                 <td><?=$data->stok?></td>
+                                <td>
+                                    <?php if($data->gambar != null){?>
+                                        <img src="<?=base_url(); ?>assets/gambar/barang/<?=$data->gambar;?>" width="90" height="100" alt="">
+                                    <?php }?>
+                                </td>
                                 <td class="text-center" width="150px">
                                     <a href="<?=site_url('barang/ubah/'.$data->id_brg)?>" class="btn btn-success btn-xs">
                                         <i class="fa fa-pencil"> Edit</i>

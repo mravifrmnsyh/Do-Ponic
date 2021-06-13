@@ -24,7 +24,8 @@ class Barang_model extends CI_Model {
             'keterangan' => $post['keterangan'],
             'kategori' => $post['kategori'],
             'harga' => $post['harga'],
-            'stok' => $post['stok']
+            'stok' => $post['stok'],
+            'gambar' => $post['gambar']
         ];
         $this->db->insert('tb_barang', $params);
     }
@@ -35,8 +36,11 @@ class Barang_model extends CI_Model {
             'keterangan' => $post['keterangan'],
             'kategori' => $post['kategori'],
             'harga' => $post['harga'],
-            'stok' => $post['stok']
+            'stok' => $post['stok'],
         ];
+        if($post['gambar'] != null){
+            $params['gambar'] = $post['gambar'];
+        }
 		$this->db->where('id_brg', $post['id_brg']);
         $this->db->update('tb_barang', $params);
     }
