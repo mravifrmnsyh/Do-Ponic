@@ -43,8 +43,8 @@
             <div class="col-md-4">
                 <div class="p-3 py-5">
                         <div class="d-flex justify-content-between align-items-center experience"><span>Ubah Password</span><span class="border px-3 p-1 add-experience"><i class="fa fa-key"></i>&nbsp;Password</span></div><br>
-                        <div class="col-md-12"><label class="labels">Password</label><input type="text" name="password" class="form-control" placeholder="password" value=""></div> <br>
-                        <div class="col-md-12"><label class="labels">Konfirmasi</label><input type="text" name="password1" class="form-control" placeholder="konfirmasi" value=""></div>
+                        <div class="col-md-12"><label class="labels">Password</label><input type="password" name="password" class="form-control" placeholder="password" value=""></div> <br>
+                        <div class="col-md-12"><label class="labels">Konfirmasi</label><input type="password" name="password1" class="form-control" placeholder="konfirmasi" value=""></div>
                 </div>
             </div>
         <?php echo form_close()?>
