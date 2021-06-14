@@ -61,7 +61,15 @@
 				<span class="badge badge-pill badge-danger notify">0</span>
 			</div>
 			<div class="widget-header icontext">
-				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
+        <?php if($this->fungsi->user_login() == null){ ?>
+          <a href="#" class="icon icon-sm rounded-circle border">
+            <i class="fa fa-user"></i>
+          </a>
+        <?php } else{?>
+          <a href="#" class="">
+            <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
+          </a>
+        <?php }?>
 				<div class="text">
 					<span class="text-muted">Selamat Datang!</span>
 					<div> 

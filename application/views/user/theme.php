@@ -58,27 +58,25 @@
 	<div class="col-lg-10 col-sm-6 col-12">
 		<div class="widgets-wrap float-md-right">
 			<div class="widget-header  mr-3">
-				<a href="#" class="icon icon-sm rounded-circle border">
-          <?php if($this->fungsi->user_login() == null){ ?>
-            <a href="#" class="icon icon-sm rounded-circle border">
-              <i class="fa fa-user"></i>
-            </a>
-          <?php } else{?>
-            <a href="#" class="">
-              <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="user-image" alt="User Image">
-            </a>
-          <?php }?>
-        </a>
+				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
 				<span class="badge badge-pill badge-danger notify">0</span>
 			</div>
 			<div class="widget-header icontext">
-				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-user"></i></a>
+        <?php if($this->fungsi->user_login() == null){ ?>
+          <a href="#" class="icon icon-sm rounded-circle border">
+            <i class="fa fa-user"></i>
+          </a>
+        <?php } else{?>
+          <a href="#" class="">
+            <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
+          </a>
+        <?php }?>
 				<div class="text">
 					<span class="text-muted">Selamat Datang!</span>
 					<div> 
             <?php if($this->fungsi->user_login() == null) { ?>
               <a href="<?=site_url('auth/login')?>">Masuk</a> |  
-              <a href="#"> Daftar</a>
+              <a href="<?=site_url('auth/register')?>"> Daftar</a>
             <?php }else{ ?>
               <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
               <a href="<?=site_url('auth/logout')?>"> Keluar</a>

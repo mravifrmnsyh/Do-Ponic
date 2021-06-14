@@ -68,7 +68,7 @@
           </a>
         <?php } else{?>
           <a href="#" class="">
-            <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="user-image" alt="User Image">
+            <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
           </a>
         <?php }?>
 				<div class="text">
