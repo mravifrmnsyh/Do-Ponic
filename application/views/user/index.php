@@ -91,7 +91,7 @@
 
               <div class="col-md-12 ftco-animate text-center">
                 <h1 class="mb-2">Semua Orang dapat Menanam</h1>
-                <h2 class="subheading mb-4">Anda dapat memulai di lahan minim pekarangan rumah</h2>
+                <h2 class="subheading mb-4">di doponic Anda dapat belajarbagaimana memulai di lahan minim pekarangan rumah</h2>
               </div>
 
             </div>
@@ -104,8 +104,8 @@
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
               <div class="col-sm-12 ftco-animate text-center">
-                <h1 class="mb-2">Hasilkan Produk Pertanian</h1>
-                <h2 class="subheading mb-4">Sayur dan buah dapat dihasilkan di lahan minim</h2>
+                <h1 class="mb-2">Menghasilkan Produk Pertanian</h1>
+                <h2 class="subheading mb-4">Seperti sayur dan buah dapat dihasilkan di lahan minim</h2>
               </div>
 
               </div>
@@ -118,8 +118,8 @@
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
               <div class="col-sm-12 ftco-animate text-center">
-                <h1 class="mb-2">Anda dapat Menjual di do Ponic</h1>
-                <h2 class="subheading mb-4">Kami dapat membantu menjual produk Anda</h2>
+                <h1 class="mb-2">Anda dapat Menjual dan Membeli produk di do Ponic</h1>
+                <h2 class="subheading mb-4">Kami dapat membantu Anda mendapatkan kebutuhan pertanian di lahan minim</h2>
 
                 </div>
           </div>
