@@ -125,9 +125,4 @@ class Users extends CI_Controller {
 		}
 		echo "<script>window.location='".site_url('users')."';</script>";
 	}
-
-	public function jumlah(){
-		$data['total'] = $this->user_model->jumlahUser();
-		$this->template->load('', 'admin/dashboard', $data);
-	}
 }

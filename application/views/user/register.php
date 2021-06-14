@@ -92,45 +92,45 @@
                 <p class="login-box-msg">Daftar akun baru</p>
 
                 <form action="<?=site_url('auth/process')?>" method="post">
-                <div class="form-group has-feedback">
-                    <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required autofocus>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="text" name="username" class="form-control" placeholder="Username" required autofocus>
-                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" name="password" class="form-control" placeholder="Password" required>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="text" name="alamat" class="form-control" placeholder="Alamat" required>
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <label for="">Foto</label>
-                    <input type="file" name="foto" class="form-control" size="20">
-                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                    <div class="row">
-                    <div class="col-8">
-                      <div class="icheck-primary">
-                        <label>Siap membuat akun?</label>
+                      <div class="form-group has-feedback">
+                          <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" value="<?=$this->input->post('nama')?>"required autofocus>
+                          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                       </div>
-                    </div>
+                      <div class="form-group has-feedback">
+                          <input type="text" name="username" class="form-control" placeholder="Username" value="<?=$this->input->post('username')?>" required autofocus>
+                          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <input type="password" name="password" class="form-control" placeholder="Password" value="<?=$this->input->post('password')?>" required>
+                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <input type="text" name="alamat" class="form-control" placeholder="Alamat" value="<?=$this->input->post('alamat')?>" required>
+                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <label for="">Foto</label>
+                          <input type="file" name="foto" class="form-control" size="20">
+                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                          <div class="row">
+                            <div class="col-8">
+                              <div class="icheck-primary">
+                                <label>Siap membuat akun?</label>
+                              </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-4">
+                              <button type="submit" name="register" class="btn btn-primary btn-block btn-flat">Daftar</button>
+                            </div>
+                          </div>
                     <!-- /.col -->
-                    <div class="col-4">
-                    <button type="submit" name="register" class="btn btn-primary btn-block btn-flat">Daftar</button>
-              </div>
-              <!-- /.col -->
-            </div>
                 </form>
             </div>
             <!-- /.login-box-body -->
         </div>
         <!-- /.login-box -->
-            </div>
+    </div>
 
 
     

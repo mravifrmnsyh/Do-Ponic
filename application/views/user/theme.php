@@ -58,7 +58,17 @@
 	<div class="col-lg-10 col-sm-6 col-12">
 		<div class="widgets-wrap float-md-right">
 			<div class="widget-header  mr-3">
-				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
+				<a href="#" class="icon icon-sm rounded-circle border">
+          <?php if($this->fungsi->user_login() == null){ ?>
+            <a href="#" class="icon icon-sm rounded-circle border">
+              <i class="fa fa-user"></i>
+            </a>
+          <?php } else{?>
+            <a href="#" class="">
+              <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="user-image" alt="User Image">
+            </a>
+          <?php }?>
+        </a>
 				<span class="badge badge-pill badge-danger notify">0</span>
 			</div>
 			<div class="widget-header icontext">

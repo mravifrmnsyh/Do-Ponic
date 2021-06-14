@@ -12,9 +12,12 @@ class User_model extends CI_Model {
         return $query;
     }
 
-    public function regist(){
+    public function regist($post){
         $this->db->select('*');
         $this->db->from('tb_pengguna');
+        $this->db->where('username', $post['username']);
+        $query = $this->db->get();
+        return $query;
         
     }
 

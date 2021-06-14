@@ -54,7 +54,7 @@
         <ul class="nav navbar-nav">
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?=base_url()?>assets/dist/img/user.png" class="user-image" alt="User Image">
+              <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?=ucfirst($this->fungsi->user_login()->username)?></span>
             </a>
             <ul class="dropdown-menu">

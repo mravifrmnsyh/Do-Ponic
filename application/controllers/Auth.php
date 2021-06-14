@@ -44,13 +44,13 @@ class Auth extends CI_Controller {
 			}
 		} else if(isset($_POST['register'])){
 			$this->load->model('user_model');
-			$post['level'] = '2';
 			$config['upload_path']          = './assets/gambar/user';
 			$config['allowed_types']        = 'jpeg|jpg|png';
 			$config['max_size']             = 2048;
 			$this->load->library('upload', $config);
-
+			
 			if($this->upload->do_upload('foto')){
+				$post['level'] = '2';
 				$post['foto'] = $this->upload->data('file_name');
 				$this->user_model->add($post);
 				echo "<script>
