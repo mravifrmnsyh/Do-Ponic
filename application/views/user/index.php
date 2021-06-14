@@ -62,12 +62,12 @@
 				<span class="badge badge-pill badge-danger notify">0</span>
 			</div>
 			<div class="widget-header icontext">
-        <?php if($this->fungsi->user_login() == null){ ?>
-          <a href="#" class="icon icon-sm rounded-circle border">
+        <?php if(($this->fungsi->user_login() == null) or ($this->fungsi->user_login()->foto == null)){ ?>
+          <a href="<?=site_url('profil')?>" class="icon icon-sm rounded-circle border">
             <i class="fa fa-user"></i>
           </a>
         <?php } else{?>
-          <a href="#" class="">
+          <a href="<?=site_url('profil')?>" class="">
             <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
           </a>
         <?php }?>

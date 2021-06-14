@@ -98,10 +98,9 @@
             <!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg">Daftar akun baru</p>
-
-                <form action="<?=site_url('auth/process')?>" method="post">
+                  <?php echo form_open_multipart('auth/process')?>
                       <div class="form-group has-feedback">
-                          <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" value="<?=$this->input->post('nama')?>"required autofocus>
+                          <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" value="<?=$this->input->post('nama')?>" required autofocus>
                           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                       </div>
                       <div class="form-group has-feedback">
@@ -109,7 +108,11 @@
                           <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                       </div>
                       <div class="form-group has-feedback">
-                          <input type="password" name="password" class="form-control" placeholder="Password" value="<?=$this->input->post('password')?>" required>
+                          <input type="password" name="password" class="form-control" placeholder="Password" required>
+                          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                      </div>
+                      <div class="form-group has-feedback">
+                          <input type="password" name="password1" class="form-control" placeholder="Confirm Password" required>
                           <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                       </div>
                       <div class="form-group has-feedback">
@@ -133,7 +136,7 @@
                             </div>
                           </div>
                     <!-- /.col -->
-                </form>
+                <?php echo form_close()?>
             </div>
             <!-- /.login-box-body -->
         </div>

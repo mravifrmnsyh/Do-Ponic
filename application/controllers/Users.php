@@ -41,18 +41,28 @@ class Users extends CI_Controller {
 			$this->template->load('admin/template', 'admin/user_tambah');
 		}else{
 			$post = $this->input->post(null, TRUE);
-			if($this->upload->do_upload('foto')){
-				$post['foto'] = $this->upload->data('file_name');
+			if($_FILES['foto']['name']!=null){
+				if($this->upload->do_upload('foto')){
+					$post['foto'] = $this->upload->data('file_name');
+					$this->user_model->add($post);
+					if($this->db->affected_rows()>0){
+						echo "<script>alert('Data Berhasil Disimpan');</script>";
+						// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+					}
+				}else{
+					echo "<script>alert('Data gagal disimpan');</script>";
+					// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+				}
+				echo "<script>window.location='".site_url('users')."';</script>";
+				// redirect('users');
+			} else {
+				$post['foto'] = null;
 				$this->user_model->add($post);
-			}else{
-				echo "upload gagal";
+				echo "<script>
+				alert('Data berhasil disimpan');
+				window.location='".site_url('users')."';
+				</script>";
 			}
- 			if($this->db->affected_rows()>0){
-				echo "<script>alert('Data Berhasil Disimpan');</script>";
-				// $this->session->set_flashdata('success', 'Data berhasil disimpan');
-			}
-			echo "<script>window.location='".site_url('users')."';</script>";
-			// redirect('users');
 		}
 
 	}
@@ -96,24 +106,34 @@ class Users extends CI_Controller {
 				// redirect('users');
 			}
 		}else{
-			if($this->upload->do_upload('foto')){
-				$item = $this->user_model->get($post['id_user'])->row();
-				if($item->foto != null){
-					$target_file = './assets/gambar/user/'.$item->foto;
-					unlink($target_file);
-				}
+			if($_FILES['foto']['name']!=null){
+				if($this->upload->do_upload('foto')){
+					$item = $this->user_model->get($post['id_user'])->row();
+					if($item->foto != null){
+						$target_file = './assets/gambar/user/'.$item->foto;
+						unlink($target_file);
+					}
 
-				$post['foto'] = $this->upload->data('file_name');
+					$post['foto'] = $this->upload->data('file_name');
+					$this->user_model->edit($post);
+					if($this->db->affected_rows()>0){
+						echo "<script>alert('Data Berhasil Disimpan');</script>";
+						// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+					}
+				}else{
+					echo "<script>alert('Data gagal disimpan');</script>";
+					// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+				}
+				echo "<script>window.location='".site_url('users')."';</script>";
+				// redirect('users');
+			} else {
+				$post['foto'] = null;
 				$this->user_model->edit($post);
-			}else{
-				echo "upload gagal";
+				echo "<script>
+				alert('Data berhasil disimpan');
+				window.location='".site_url('users')."';
+				</script>";
 			}
- 			if($this->db->affected_rows()>0){
-				echo "<script>alert('Data Berhasil Disimpan');</script>";
-				// $this->session->set_flashdata('success', 'Data berhasil disimpan');
-			}
-			echo "<script>window.location='".site_url('users')."';</script>";
-			// redirect('users');
 		}
 
 	}
