@@ -91,7 +91,7 @@
 
               <div class="col-md-12 ftco-animate text-center">
                 <h1 class="mb-2">Semua Orang dapat Menanam</h1>
-                <h2 class="subheading mb-4">di doponic Anda dapat belajarbagaimana memulai di lahan minim pekarangan rumah</h2>
+                <h2 class="subheading mb-4">di do Ponic Anda dapat belajarbagaimana memulai di lahan minim pekarangan rumah</h2>
               </div>
 
             </div>
