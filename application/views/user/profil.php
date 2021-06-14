@@ -8,7 +8,7 @@
             </a>
             <?php } else{?>
             <a href="<?=site_url('profil')?>" class="">
-                <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
+                <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="rounded-circle border"  alt="User Image">
             </a>
             <?php }?>
             <span class="font-weight-bold"><?=ucfirst($this->fungsi->user_login()->nama)?></span>
