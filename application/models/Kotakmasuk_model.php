@@ -3,22 +3,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Kotakmasuk_model extends CI_Model {
 
-    public function get($nama = null){
+    public function get($id = null){
         $this->db->from('tb_pesan');
-        if($nama != null){
-            $this->db->where('nama', $nama);
+        if($id != null){
+            $this->db->where('id_user', $id);
         }
         $query = $this->db->get();
         return $query;
     }
 
-    public function del($nama){
-		$this->db->where('nama', $nama);
+    public function del($id){
+		$this->db->where('id_user', $id);
 		$this->db->delete('tb_pesan');
 	}
 
     public function add($post){
         $params = [
+            'id_user' => $this->fungsi->user_login()->id_user,
             'nama' => $post['nama'],
             'email' => $post['email'],
             'subjek' => $post['subjek'],
