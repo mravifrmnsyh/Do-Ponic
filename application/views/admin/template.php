@@ -124,8 +124,8 @@
 		  </a>
         </li>
 		<li>
-          <a href="#">
-            <i class="fa fa-sticky-note"></i> <span>Article</span>
+          <a href="<?=site_url('artikel')?>">
+            <i class="fa fa-sticky-note"></i> <span>Artikel</span>
             </span>
           </a>
         </li>

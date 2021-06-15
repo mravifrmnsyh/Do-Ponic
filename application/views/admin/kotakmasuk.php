@@ -17,7 +17,7 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>NO</th>
+                            <th style="width:5px">NO</th>
                             <th>NAMA</th>
                             <th>EMAIL</th>
                             <th>SUBJEK</th>
@@ -35,7 +35,7 @@
                                 <td><?=$data->subjek?></td>
                                 <td><?=$data->pesan?></td>
                                 <td class="text-center" width="150px">
-                                    <a href="<?=site_url('kotakmasuk/hapus/'.$data->id_user)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
+                                    <a href="<?=site_url('kotakmasuk/hapus/'.$data->id_pesan)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash"> Hapus</i>
                                     </a>
                                 </td>
