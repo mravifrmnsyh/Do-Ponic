@@ -25,23 +25,23 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-7 contact-form">
+            <form action="<?=site_url('kotakmasuk/process')?>" class="bg-white p-7 contact-form">
             <p>Anda dapat menghubungi kami melalui kotak pesan di bawah ini</p>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Nama">
+                <input type="text" name="nama" class="form-control" placeholder="Nama">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
+                <input type="text" name="email" class="form-control" placeholder="Email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subjek">
+                <input type="text" name="subjek" class="form-control" placeholder="Subjek">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Pesan"></textarea>
+                <textarea name="pesan" cols="30" rows="7" class="form-control" placeholder="Pesan"></textarea>
               </div>
               <div class="col-4">
-                    <button type="submit" name="" class="btn btn-primary btn-block btn-flat">Kirim</button>
-              </div>
+                    <button type="submit" name="kotakmasuk" class="btn btn-primary btn-block btn-flat">Kirim</button>
+              </div> </div>
             </form>
           
           </div>
