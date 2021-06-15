@@ -31,17 +31,17 @@
       </div>
       <div class="container">
           <div class="row">
+      
+         <?php foreach ($barang as $brg):?>
               <div class="col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
-                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
-                          <span class="status">30%</span>
-                          <div class="overlay"></div>
+                      <a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
                       </a>
                       <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#">Tomat</a></h3>
+                          <h3><?php echo $brg->nama_brg ?></h3>
                           <div class="d-flex">
                               <div class="pricing">
-                                  <p class="price"><span class="mr-2 price-dc">Rp. 15.000,00-</span><span class="price-sale">Rp. 8.000,00-</span></p>
+                                  <p class="price"><span class="price-sale">Rp. <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
                               </div>
                           </div>
                           <div class="bottom-area d-flex px-3">
@@ -57,81 +57,7 @@
                       </div>
                   </div>
               </div>
-              <div class="col-md-6 col-lg-3 ftco-animate">
-                  <div class="product">
-                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
-                          <div class="overlay"></div>
-                      </a>
-                      <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#">Terong Ungu</a></h3>
-                          <div class="d-flex">
-                              <div class="pricing">
-                                  <p class="price"><span>Rp. 7.000,00-</span></p>
-                              </div>
-                          </div>
-                          <div class="bottom-area d-flex px-3">
-                              <div class="m-auto d-flex">
-                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                      <span><i class="ion-ios-menu"></i></span>
-                                  </a>
-                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                      <span><i class="ion-ios-cart"></i></span>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-3 ftco-animate">
-                  <div class="product">
-                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
-                          <div class="overlay"></div>
-                      </a>
-                      <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#">Kangkung</a></h3>
-                          <div class="d-flex">
-                              <div class="pricing">
-                                  <p class="price"><span>Rp. 5.000,00-</span></p>
-                              </div>
-                          </div>
-                          <div class="bottom-area d-flex px-3">
-                              <div class="m-auto d-flex">
-                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                      <span><i class="ion-ios-menu"></i></span>
-                                  </a>
-                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                      <span><i class="ion-ios-cart"></i></span>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-6 col-lg-3 ftco-animate">
-                  <div class="product">
-                      <a href="#" class="img-prod"><img class="img-fluid" src="<?=base_url()?>assets/user/img/gambar-2.jpg" alt="doPonic">
-                          <div class="overlay"></div>
-                      </a>
-                      <div class="text py-3 pb-4 px-3 text-center">
-                          <h3><a href="#">Bubuk Cabe</a></h3>
-                          <div class="d-flex">
-                              <div class="pricing">
-                                  <p class="price"><span>Rp. 10.000,00-</span></p>
-                              </div>
-                          </div>
-                          <div class="bottom-area d-flex px-3">
-                              <div class="m-auto d-flex">
-                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                      <span><i class="ion-ios-menu"></i></span>
-                                  </a>
-                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                      <span><i class="ion-ios-cart"></i></span>
-                                  </a>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
+              <?php endforeach;?>
           </div>
       </div>
   </section>

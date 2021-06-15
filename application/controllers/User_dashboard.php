@@ -5,6 +5,7 @@ class User_dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$this->template->load('user/index', 'user/user_dashboard');
+		$data['barang'] = $this->barang_model->tampil_data()->result();
+		$this->template->load('user/index', 'user/user_dashboard', $data);
 	}
 }

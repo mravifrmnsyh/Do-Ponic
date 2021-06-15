@@ -30,6 +30,10 @@ class Barang_model extends CI_Model {
         $this->db->insert('tb_barang', $params);
     }
 
+    public function tampil_data(){
+        return $this->db->get('tb_barang');
+    }
+
     public function edit($post){
         $params = [
             'nama_brg' => $post['nama_brg'],
