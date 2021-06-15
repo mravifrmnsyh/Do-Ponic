@@ -10,7 +10,8 @@ class Dashboard extends CI_Controller {
 		$this->load->model('user_model');
 		$this->load->model('supplier_model');
 		$this->load->model('barang_model');
-		
+		$this->load->model('artikel_model');
+		$this->load->model('kotakmasuk_model');
 	}
 
 	public function index()
@@ -19,6 +20,8 @@ class Dashboard extends CI_Controller {
 		$data['user'] = $this->user_model->jumlahUser();
 		$data['sup'] = $this->supplier_model->jumlahSup();
 		$data['brg'] = $this->barang_model->jumlahBrg();
+		$data['art'] = $this->artikel_model->jumlahArt();
+		$data['kot'] = $this->kotakmasuk_model->jumlahKot();
 		$this->template->load('admin/template', 'admin/dashboard', $data);
 	}
 }

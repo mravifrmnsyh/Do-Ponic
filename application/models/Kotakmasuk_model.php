@@ -6,14 +6,14 @@ class Kotakmasuk_model extends CI_Model {
     public function get($id = null){
         $this->db->from('tb_pesan');
         if($id != null){
-            $this->db->where('id_user', $id);
+            $this->db->where('id_pesan', $id);
         }
         $query = $this->db->get();
         return $query;
     }
 
     public function del($id){
-		$this->db->where('id_user', $id);
+		$this->db->where('id_pesan', $id);
 		$this->db->delete('tb_pesan');
 	}
 
@@ -47,5 +47,14 @@ class Kotakmasuk_model extends CI_Model {
         }else{
             return false;
         }
+    }
+
+    public function jumlahKot(){
+        $query = $this->db->get('tb_pesan');
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        } else {
+            return 0;
+        } 
     }
 }

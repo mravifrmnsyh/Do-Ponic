@@ -45,8 +45,9 @@ class Kotakmasuk extends CI_Controller {
 		} 
 		if($this->db->affected_rows()>0){
 			echo "<script>alert('Pesan Berhasil Dikirim');</script>";
+			echo "<script>window.location='".site_url('kontak')."';</script>";
 		}
-		echo "<script>window.location='".site_url('kontak')."';</script>";
-
+		echo "<script>alert('Silakan login untuk kirim pesan!!');</script>";
+		echo "<script>window.location='".site_url('login')."';</script>";
 	}
 }

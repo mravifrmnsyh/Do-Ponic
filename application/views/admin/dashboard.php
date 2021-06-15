@@ -10,9 +10,18 @@
     <section class="content">
 
 		<div class="row">
+		<div class="col-md-3 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-yellow"><i class="fa fa-sticky-note"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Artikel</span>
+						<span class="info-box-number"><?= $art?></span>
+					</div>
+				</div>
+			</div>
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="info-box">
-					<span class="info-box-icon bg-aqua"><i class="fa fa-th"></i></span>
+					<span class="info-box-icon bg-aqua"><i class="fa fa-archive"></i></span>
 					<div class="info-box-content">
 						<span class="info-box-text">Barang</span>
 						<span class="info-box-number"><?= $brg?></span>
@@ -29,20 +38,19 @@
 				</div>
 			</div>
 
-			<div class="clearfix visible-sm-block"></div>
-
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="info-box">
-					<span class="info-box-icon bg-green"><i class="fa fa-users"></i></span>
+					<span class="info-box-icon bg-green"><i class="fa fa-inbox"></i></span>
 					<div class="info-box-content">
-						<span class="info-box-text">Costumers</span>
-						<span class="info-box-number">60</span>
+						<span class="info-box-text">Pesan</span>
+						<span class="info-box-number"><?= $kot?></span>
 					</div>
 				</div>
 			</div>
+			<div class="clearfix visible-sm-block"></div>
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="info-box">
-					<span class="info-box-icon bg-yellow"><i class="fa fa-plus"></i></span>
+					<span class="info-box-icon bg-yellow"><i class="fa fa-user"></i></span>
 					<div class="info-box-content">
 						<span class="info-box-text">Users</span>
 						<span class="info-box-number"><?= $user?></span>

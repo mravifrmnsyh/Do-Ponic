@@ -1,20 +1,20 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
       <h1>
-        Supplier
-        <small>Penyetok</small>
+        Daftar
+        <small>Artikel</small>
       </h1>
     </section>
 
     <!-- Main content -->
     <section class="content">
-
+    
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Data Supplier</h3>
+                <h3 class="box-title">Daftar Artikel</h3>
                 <div class="pull-right">
-                    <a href="<?=site_url('supplier/tambah')?>" class="btn btn-primary btn-flat">
-                        <i class="fa fa-plus"> Tambah</i>
+                    <a href="<?=site_url('artikel/tambah')?>" class="btn btn-primary btn-flat">
+                        <i class="fa fa-user-plus"> Tambah</i>
                     </a>
                 </div>
             </div>
@@ -22,38 +22,37 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th style="width:5px">No</th>
-                            <th>ID</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Telepon</th>
-                            <th>Deskripsi</th>
+                            <th style="width:5px">NO</th>
+                            <th style="width:130px">JUDUL</th>
+                            <th style="width:600px">DESKRIPSI</th>
+                            <th>GAMBAR</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $num = 1;
+                    <?php $num = 1;
                         foreach($row->result() as $key => $data) { ?>
                             <tr>
                                 <td><?=$num++?></td>
-                                <td><?=$data->id_supplier?></td>
-                                <td><?=$data->nama?></td>
-                                <td><?=$data->alamat?></td>
-                                <td><?=$data->telepon?></td>
+                                <td><?=$data->judul?></td>
                                 <td><?=$data->deskripsi?></td>
+                                <td>
+                                    <?php if($data->gambar != null){?>
+                                        <img src="<?=base_url(); ?>assets/gambar/artikel/<?=$data->gambar;?>" width="90" height="100" alt="">
+                                    <?php }?>
+                                </td>
                                 <td class="text-center" width="150px">
-                                    <a href="<?=site_url('supplier/ubah/'.$data->id_supplier)?>" class="btn btn-success btn-xs">
+                                    <a href="<?=site_url('artikel/ubah/'.$data->id_artikel)?>" class="btn btn-success btn-xs">
                                         <i class="fa fa-pencil"> Edit</i>
                                     </a> | 
-                                    <a href="<?=site_url('supplier/hapus/'.$data->id_supplier)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
+                                    <a href="<?=site_url('artikel/hapus/'.$data->id_artikel)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash"> Hapus</i>
                                     </a>
                                 </td>
                             </tr>
                         <?php } ?>
-                    </tbody>
+                        </tbody>
                 </table>
             </div>
         </div>
-		
-	</section>
+        </section>		

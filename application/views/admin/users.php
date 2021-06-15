@@ -8,7 +8,7 @@
 
     <!-- Main content -->
     <section class="content">
-    <?php $this->view('messages')?>
+        <?php $this->view('admin/messages')?>
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">Data Users</h3>
@@ -22,7 +22,7 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>No</th>
+                            <th style="width:5px">No</th>
                             <th>ID</th>
                             <th>Username</th>
                             <th>Password</th>

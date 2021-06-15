@@ -22,7 +22,7 @@
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>NO</th>
+                            <th style="width:5px">NO</th>
                             <th>ID</th>
                             <th>NAMA BARANG</th>
                             <th>KETERANGAN</th>
