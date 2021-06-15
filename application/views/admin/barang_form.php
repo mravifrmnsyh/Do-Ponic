@@ -38,7 +38,15 @@
 
                             <div class="form-group">
                                 <label>Kategori</label>
-                                <input type="text" name="kategori" value="<?=$row->kategori?>" class="form-control">
+                                <select name="kategori" class="form-control">
+                                    <?php $kategori = $this->input->post('kategori') ?? $row->kategori?>
+                                    <?php if($page!='ubah') { ?>
+                                        <option value="">- Pilih -</option>
+                                    <?php } ?>
+                                    <option value="alat" <?=$kategori == 'alat' ? 'selected' : null?>> Alat </option>
+                                    <option value="bibit" <?=$kategori == 'bibit' ? 'selected' : null?>> Bibit </option>
+                                    <option value="buah" <?=$kategori == 'buah' ? 'selected' : null?>> Buah </option>
+                                </select>
                             </div>
 
                             <div class="form-group">
