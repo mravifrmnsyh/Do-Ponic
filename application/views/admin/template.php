@@ -123,12 +123,6 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
 		  </a>
         </li>
-        <li>
-          <a href="<?=site_url('supplier')?>">
-            <i class="fa fa-truck"></i> <span>Supplier</span>
-            </span>
-          </a>
-        </li>
 		<li>
           <a href="#">
             <i class="fa fa-sticky-note"></i> <span>Article</span>
@@ -141,18 +135,29 @@
             </span>
           </a>
         </li>
+        <li>
+          <a href="<?=site_url('supplier')?>">
+            <i class="fa fa-truck"></i> <span>Supplier</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="<?=site_url('kotakmasuk')?>">
+            <i class="fa fa-inbox"></i> <span>Pesan</span>
+            </span>
+          </a>
+        </li>
 		<li class="treeview">
           <a href="#">
             <i class="fa fa-shopping-cart"></i>
-            <span>Transaction</span>
+            <span>Transaksi</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Sales</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Stock In</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Stock Out</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Stok Tersedia</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Stok Terjual</a></li>
           </ul>
         </li>
         
