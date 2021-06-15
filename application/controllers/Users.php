@@ -46,15 +46,15 @@ class Users extends CI_Controller {
 					$post['foto'] = $this->upload->data('file_name');
 					$this->user_model->add($post);
 					if($this->db->affected_rows()>0){
-						echo "<script>alert('Data Berhasil Disimpan');</script>";
-						// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+						// echo "<script>alert('Data Berhasil Disimpan');</script>";
+						$this->session->set_flashdata('success', 'Data berhasil disimpan');
 					}
 				}else{
-					echo "<script>alert('Data gagal disimpan');</script>";
-					// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+					// echo "<script>alert('Data gagal disimpan');</script>";
+					$this->session->set_flashdata('success', 'Data berhasil disimpan');
 				}
-				echo "<script>window.location='".site_url('users')."';</script>";
-				// redirect('users');
+				// echo "<script>window.location='".site_url('users')."';</script>";
+				redirect('users');
 			} else {
 				$post['foto'] = null;
 				$this->user_model->add($post);
@@ -117,22 +117,25 @@ class Users extends CI_Controller {
 					$post['foto'] = $this->upload->data('file_name');
 					$this->user_model->edit($post);
 					if($this->db->affected_rows()>0){
-						echo "<script>alert('Data Berhasil Disimpan');</script>";
-						// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+						// echo "<script>alert('Data Berhasil Disimpan');</script>";
+						$this->session->set_flashdata('success', 'Data berhasil disimpan');
 					}
 				}else{
-					echo "<script>alert('Data gagal disimpan');</script>";
-					// $this->session->set_flashdata('success', 'Data berhasil disimpan');
+					// echo "<script>alert('Data gagal disimpan');</script>";
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
 				}
-				echo "<script>window.location='".site_url('users')."';</script>";
-				// redirect('users');
+				// echo "<script>window.location='".site_url('users')."';</script>";
+
+				redirect('users');
 			} else {
 				$post['foto'] = null;
 				$this->user_model->edit($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('users')."';
-				</script>";
+				// echo "<script>
+				// alert('Data berhasil disimpan');
+				// window.location='".site_url('users')."';
+				// </script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('users');
 			}
 		}
 
