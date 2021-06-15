@@ -24,9 +24,12 @@
           </div>
         </div>
         <div class="row block-9">
-          <div class="col-md-6 order-md-last d-flex">
+          <div class="col-md-6 align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/logo.png);"> 
+          </div>
+          <div class="col-md-5 order-md-last d-flex">
             <form action="<?=site_url('kotakmasuk/proses')?>" class="bg-white p-7 contact-form" method="post">
             <p>Anda dapat menghubungi kami melalui kotak pesan di bawah ini</p>
+            <br>
               <div class="form-group">
                 <input type="text" name="nama" class="form-control" placeholder="Nama">
               </div>
@@ -46,8 +49,6 @@
           
           </div>
 
-          <div class="col-md-6 align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/logo.png);"> 
-          </div>
         </div>
       </div>
     </section>
