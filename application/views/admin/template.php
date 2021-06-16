@@ -71,7 +71,7 @@
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  <a href="<?=site_url('user_dashboard')?>" class="btn btn-default btn-flat">User Dashboard</a>
                 </div>
                 <div class="pull-right">
                   <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>

@@ -23,7 +23,6 @@
                     <thead>
                         <tr>
                             <th style="width:5px">NO</th>
-                            <th>ID</th>
                             <th>NAMA BARANG</th>
                             <th>KETERANGAN</th>
                             <th>KATEGORI</th>
@@ -38,7 +37,6 @@
                         foreach($row->result() as $key => $data) { ?>
                             <tr>
                                 <td><?=$num++?></td>
-                                <td><?=$data->id_brg?></td>
                                 <td><?=$data->nama_brg?></td>
                                 <td><?=$data->keterangan?></td>
                                 <td><?=$data->kategori?></td>

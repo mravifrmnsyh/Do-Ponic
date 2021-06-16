@@ -23,7 +23,6 @@
                     <thead>
                         <tr>
                             <th style="width:5px">No</th>
-                            <th>ID</th>
                             <th>Username</th>
                             <th>Password</th>
                             <th>Nama</th>
@@ -38,7 +37,6 @@
                         foreach($row->result() as $key => $data) { ?>
                             <tr>
                                 <td><?=$num++?></td>
-                                <td><?=$data->id_user?></td>
                                 <td><?=$data->username?></td>
                                 <td><?=$data->password?></td>
                                 <td><?=$data->nama?></td>

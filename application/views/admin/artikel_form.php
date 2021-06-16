@@ -27,8 +27,16 @@
                                 <input type="text" name="id_artikel" readonly value="<?=$row->id_artikel?>" class="form-control">
                             </div>
                             <div class="form-group">
+                                <label for="">Tanggal</label>
+                                <input type="date" name="date" value="<?=$row->date?>" class="form-control">
+                            </div>
+                            <div class="form-group">
                                 <label>Judul</label>
                                 <input type="text" name="judul" value="<?=$row->judul?>" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Tag</label>
+                                <input type="text" name="tag" value="<?=$row->tag?>" class="form-control">
                             </div>
 
                             <div class="form-group">

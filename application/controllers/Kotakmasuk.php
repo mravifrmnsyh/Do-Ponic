@@ -6,6 +6,7 @@ class Kotakmasuk extends CI_Controller {
 	function __construct(){
 		parent::__construct();
 		cekTidakLogin();
+		cekAdmin();
 		$this->load->model('kotakmasuk_model');
 		$this->load->library('form_validation');
 	}

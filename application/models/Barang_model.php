@@ -30,8 +30,17 @@ class Barang_model extends CI_Model {
         $this->db->insert('tb_barang', $params);
     }
 
-    public function tampil_data(){
+    public function tampil_data_semua(){
         return $this->db->get('tb_barang');
+    }
+
+    public function tampil_data($kat){
+        $this->db->from('tb_barang');
+        if($kat != null){
+            $this->db->where('kategori', $kat);
+        }
+        $query = $this->db->get();
+        return $query;
     }
 
     public function edit($post){

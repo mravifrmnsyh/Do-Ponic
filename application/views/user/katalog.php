@@ -1,13 +1,18 @@
 <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center">
-    			<div class="col-md-10 mb-5 text-center">
-    				<ul class="product-category">
-    					<li><a href="#" class="active">All</a></li>
-    					<li><a href="#">Kategori 1</a></li>
-    					<li><a href="#">Kategori 2</a></li>
-    				</ul>
-    			</div>
+                <form action="" method="post">
+                    <div class="col-md-12 mb-5 text-center">
+                        <div class="block-27">
+                            <ul class="product-category">
+                                <li><button class="btn btn-primary" type="submit" name="all">All</button></li>
+                                <li><button class="btn btn-primary" type="submit" name="alat">Alat</button></li>
+                                <li><button class="btn btn-primary" type="submit" name="bibit">Bibit</button></li>
+                                <li><button class="btn btn-primary" type="submit" name="buah">buah</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
     		</div>
             <div class="container">
           <div class="row">

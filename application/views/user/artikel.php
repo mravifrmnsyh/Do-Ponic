@@ -1,46 +1,44 @@
 <section class="ftco-degree-bg">
-      <div class="container">
-        <div class="row">
-        
-          <div class="col-lg-8 ftco-animate">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 ftco-animate">
+        <div class="text d-block pl-md-4">
           <?php foreach($row as $contents):?>
-            <p>
-              <img src="<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>" alt="" class="img-fluid">
-            </p>
+            <img src="<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>"  style="padding:10px;width:400px;height: 300px;" alt="" class="img-fluid">
             <div class="row">
-						<h2 class="mb-2"><?php echo $contents->judul ?></h2>
-            <p><?php echo $contents->deskripsi ?></p>
-            
+              <h2 class="mb-2"><?php echo $contents->judul ?></h2>
+              <div class="meta mb-3">
+                <p style="text-align:justify;"><?php echo $contents->deskripsi ?></p>
+              </div>
             </div>
           <?php endforeach?>
-          </div> <!-- .col-md-8 -->
-          
-          
-          <div class="col-lg-4 sidebar ftco-animate">
-            <div class="sidebar-box">
-              <form action="#" class="search-form">
-                <div class="form-group">
-                  <span class="icon ion-ios-search"></span>
-                  <input type="text" class="form-control" placeholder="Search...">
-                </div>
-              </form>
+        </div> <!-- .col-md-8 -->
+      </div>
+      <div class="col-lg-4 sidebar ftco-animate">
+        <div class="sidebar-box">
+          <form action="#" class="search-form">
+            <div class="form-group">
+              <span class="icon ion-ios-search"></span>
+              <input type="text" class="form-control" placeholder="Search...">
             </div>
-
-            <div class="sidebar-box ftco-animate">
-              <h3 class="heading">Recent Blog</h3>
+          </form>
+        </div>
+        <div class="sidebar-box ftco-animate">
+          <h3 class="heading">Recent Blog</h3>
+            <?php foreach($dat as $contents):?>
               <div class="block-21 mb-4 d-flex">
-              <?php foreach($row as $contents):?>
                 <a class="blog-img mr-4" style="background-image: url(<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>);"></a>
                 <div class="text">
-                  <h3 class="heading-1"><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>"><?php echo $contents->judul ?></a></h3>
+                  <h3 class="heading-1"><a href="<?=site_url('artikel/detail/'.$contents->id_artikel)?>"><?php echo $contents->judul ?></a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span><?php echo $contents->date ?></a></div>
                     <div><a href="#"><span class="icon-person"></span> <?php echo $contents->tag ?></a></div>
                   </div>
                 </div>
-                <?php endforeach?>
               </div>
-
+            <?php endforeach?>
         </div>
       </div>
-    </section> <!-- .section -->
+    </div>
+  </div>
+</section> <!-- .section -->

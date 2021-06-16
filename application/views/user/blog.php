@@ -14,7 +14,7 @@
 		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span><?php echo $contens->tag ?></a></div>
 		                </div>
 		                <h3 class="heading"><a href="#"><?php echo $contens->judul ?></a></h3>
-		                <p><?php echo $contens->deskripsi ?></p>
+		                <p><?php echo str_word_count($contens->deskripsi) > 60 ? substr($contens->deskripsi,0,100)."..." : $contens->deskripsi ?></p>
 		                <p><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>" class="btn btn-primary py-2 px-3">Baca Terus</a></p>
 		              </div>
 		            </div>
@@ -35,18 +35,18 @@
 
             <div class="sidebar-box ftco-animate">
               <h3 class="heading">Recent Blog</h3>
-              <div class="block-21 mb-4 d-flex">
               <?php foreach($row as $contents):?>
+              <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>);"></a>
                 <div class="text">
-                  <h3 class="heading-1"><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>"><?php echo $contents->judul ?></a></h3>
+                  <h3 class="heading-1"><a href="<?=site_url('artikel/detail/'.$contents->id_artikel)?>"><?php echo $contents->judul ?></a></h3>
                   <div class="meta">
                     <div><a href="#"><span class="icon-calendar"></span><?php echo $contents->date ?></a></div>
                     <div><a href="#"><span class="icon-person"></span> <?php echo $contents->tag ?></a></div>
                   </div>
                 </div>
-                <?php endforeach?>
               </div>
+                <?php endforeach?>
 
         </div>
       </div>

@@ -19,8 +19,9 @@ class Artikel_model extends CI_Model {
 
     public function add($post){
         $params = [
-            'id_artikel' => $post['id_artikel'],
+            'date' => $post['date'],
             'judul' => $post['judul'],
+            'tag' => $post['tag'],
             'deskripsi' => $post['deskripsi'],
             'gambar' => $post['gambar']
         ];

@@ -5,8 +5,6 @@ class Artikel extends CI_Controller {
 	
 	function __construct(){
 		parent::__construct();
-		cekTidakLogin();
-		cekAdmin();
 		$this->load->model('artikel_model');
 		$this->load->library('form_validation');
 	}
@@ -42,9 +40,9 @@ class Artikel extends CI_Controller {
 	}
 
 	public function detail($id){
+		$data['dat'] = $this->artikel_model->get()->result();
 		$data['row'] = $this->artikel_model->detail($id);
 		$this->template->load('user/theme', 'user/artikel', $data);
-		
 	}
 	
 
@@ -93,7 +91,7 @@ class Artikel extends CI_Controller {
 		}else if(isset($_POST['ubah'])){
 			if($_FILES['gambar']['name']!=null){
 				if($this->upload->do_upload('gambar')){
-					$item = $this->artikel_model->get($post['id_brg'])->row();
+					$item = $this->artikel_model->get($post['id_artikel'])->row();
 					if($item->gambar != null){
 						$target_file = './assets/gambar/artikel/'.$item->gambar;
 						unlink($target_file);
