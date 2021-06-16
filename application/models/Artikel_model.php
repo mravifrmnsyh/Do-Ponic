@@ -50,7 +50,7 @@ class Artikel_model extends CI_Model {
         }
     }
 
-    public function detail_brg($id)
+    public function detail($id)
     {
         $result = $this->db->where('id_artikel', $id)->get('tb_artikel');
         if($result->num_rows() > 0){

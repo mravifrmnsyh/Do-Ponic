@@ -23,7 +23,9 @@
                     <thead>
                         <tr>
                             <th style="width:5px">NO</th>
-                            <th style="width:130px">JUDUL</th>
+                            <th style="width:130px">JUDUL</th>                            
+                            <th style="width:130px">TANGGAL</th>                            
+                            <th style="width:130px">TAG</th>
                             <th style="width:600px">DESKRIPSI</th>
                             <th>GAMBAR</th>
                             <th>Aksi</th>
@@ -35,6 +37,8 @@
                             <tr>
                                 <td><?=$num++?></td>
                                 <td><?=$data->judul?></td>
+                                <td><?=$data->date?></td>
+                                <td><?=$data->tag?></td>
                                 <td><?=$data->deskripsi?></td>
                                 <td>
                                     <?php if($data->gambar != null){?>

@@ -14,7 +14,7 @@ class Artikel extends CI_Controller {
 	public function index()
 	{
 		$data['row'] = $this->artikel_model->get();
-		$this->template->load('admin/template', 'admin/artikel', $data);
+		$this->template->load('admin/template', 'admin/artikel', $data);					
 	}
 
     public function hapus($id){
@@ -28,7 +28,9 @@ class Artikel extends CI_Controller {
 	public function tambah(){
 		$artikel = new stdClass();
 		$artikel->id_artikel = null;
+		$artikel->date = null;
 		$artikel->judul = null;
+		$artikel->tag = null;
 		$artikel->deskripsi = null;
 		$artikel->gambar = null;
 
@@ -38,6 +40,13 @@ class Artikel extends CI_Controller {
 		);
 		$this->template->load('admin/template', 'admin/artikel_form', $data);
 	}
+
+	public function detail($id){
+		$data['row'] = $this->artikel_model->detail($id);
+		$this->template->load('user/theme', 'user/artikel', $data);
+		
+	}
+	
 
 	public function ubah($id){
 		$query = $this->artikel_model->get($id);

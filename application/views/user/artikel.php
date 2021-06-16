@@ -1,28 +1,21 @@
- <section class="ftco-section ftco-degree-bg">
+<section class="ftco-degree-bg">
       <div class="container">
         <div class="row">
+        
           <div class="col-lg-8 ftco-animate">
-			<div class="row">
-                  <?php foreach ($row as $contens):?>
-			<div class="col-md-12 d-flex ftco-animate">
-		            <div class="blog-entry align-self-stretch d-md-flex">
-		              <a href="" class="block-20" style="background-image: url('<?php echo base_url().'/assets/gambar/artikel/'.$contens->gambar ?>');">
-		              </a>
-		              <div class="text d-block pl-md-4">
-		              	<div class="meta mb-3">
-		                  <div><a href="#"><?php echo $contens->date ?></a></div>
-		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span><?php echo $contens->tag ?></a></div>
-		                </div>
-		                <h3 class="heading"><a href="#"><?php echo $contens->judul ?></a></h3>
-		                <p><?php echo $contens->deskripsi ?></p>
-		                <p><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>" class="btn btn-primary py-2 px-3">Baca Terus</a></p>
-		              </div>
-		            </div>
-		          </div>
-                      <?php endforeach?>
-			</div>
+          <?php foreach($row as $contents):?>
+            <p>
+              <img src="<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>" alt="" class="img-fluid">
+            </p>
+            <div class="row">
+						<h2 class="mb-2"><?php echo $contents->judul ?></h2>
+            <p><?php echo $contents->deskripsi ?></p>
+            
+            </div>
+          <?php endforeach?>
           </div> <!-- .col-md-8 -->
-
+          
+          
           <div class="col-lg-4 sidebar ftco-animate">
             <div class="sidebar-box">
               <form action="#" class="search-form">
