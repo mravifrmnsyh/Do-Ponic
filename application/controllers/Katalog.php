@@ -17,4 +17,10 @@ class Katalog extends CI_Controller {
 		}
 		$this->template->load('user/theme', 'user/katalog', $data);
 	}
+
+	public function detail($id){
+		$data['dat'] = $this->barang_model->get()->result();
+		$data['row'] = $this->barang_model->detail_brg($id);
+		$this->template->load('user/theme', 'user/katalog_desc', $data);
+	}
 }
