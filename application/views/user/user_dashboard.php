@@ -32,7 +32,7 @@
       <div class="container">
           <div class="row">
       
-         <?php foreach ($barang as $brg):?>
+         <?php  $i=0;  foreach ($barang as $brg):?>
               <div class="col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
                       <a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
@@ -46,7 +46,7 @@
                           </div>
                           <div class="bottom-area d-flex px-3">
                               <div class="m-auto d-flex">
-                                  <a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                  <a href="<?=site_url('barang/detail/'.$brg->id_brg)?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                       <span><i class="ion-ios-menu"></i></span>
                                   </a>
                                   <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
@@ -57,7 +57,7 @@
                       </div>
                   </div>
               </div>
-              <?php endforeach;?>
+              <?php $i++; if($i==4){break;}; endforeach;?>
           </div>
       </div>
   </section>

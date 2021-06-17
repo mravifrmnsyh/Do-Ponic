@@ -35,7 +35,7 @@
 
             <div class="sidebar-box ftco-animate">
               <h3 class="heading">Recent Blog</h3>
-              <?php foreach($row as $contents):?>
+              <?php $i=0; foreach($row as $contents):?>
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>);"></a>
                 <div class="text">
@@ -46,7 +46,7 @@
                   </div>
                 </div>
               </div>
-                <?php endforeach?>
+                <?php $i++; if($i==4){break;}endforeach?>
 
         </div>
       </div>
