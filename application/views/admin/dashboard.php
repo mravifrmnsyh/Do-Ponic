@@ -23,7 +23,7 @@
 				<div class="info-box">
 					<span class="info-box-icon bg-aqua"><i class="fa fa-archive"></i></span>
 					<div class="info-box-content">
-						<span class="info-box-text">Barang</span>
+						<span class="info-box-text">Produk</span>
 						<span class="info-box-number"><?= $brg?></span>
 					</div>
 				</div>

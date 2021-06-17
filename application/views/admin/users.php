@@ -1,17 +1,10 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-      <h1>
-        Users
-        <small>Pengguna</small>
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">
         <?php $this->view('admin/messages')?>
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Data Users</h3>
+                <h3 class="box-title">Data Pengguna</h3>
                 <div class="pull-right">
                     <a href="<?=site_url('users/tambah')?>" class="btn btn-primary btn-flat">
                         <i class="fa fa-user-plus"> Tambah</i>

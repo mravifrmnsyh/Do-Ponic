@@ -1,17 +1,10 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-      <h1>
-        Data
-        <small>Barang</small>
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">
     
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Data Barang</h3>
+                <h3 class="box-title">Data Produk</h3>
                 <div class="pull-right">
                     <a href="<?=site_url('barang/tambah')?>" class="btn btn-primary btn-flat">
                         <i class="fa fa-user-plus"> Tambah</i>
@@ -23,7 +16,7 @@
                     <thead>
                         <tr>
                             <th style="width:5px">NO</th>
-                            <th>NAMA BARANG</th>
+                            <th>NAMA</th>
                             <th>KETERANGAN</th>
                             <th>KATEGORI</th>
                             <th>HARGA</th>

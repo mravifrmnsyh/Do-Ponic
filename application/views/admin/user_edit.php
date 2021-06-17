@@ -1,17 +1,10 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-      <h1>
-        Users
-        <small>Pengguna</small>
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">
 
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title">Edit Users</h3>
+                <h3 class="box-title">Edit Pengguna</h3>
                 <div class="pull-right">
                     <a href="<?=site_url('users')?>" class="btn btn-warning btn-flat">
                         <i class="fa fa-undo"> Kembali</i>
