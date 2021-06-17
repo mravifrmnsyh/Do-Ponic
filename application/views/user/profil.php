@@ -7,8 +7,8 @@
                 <i class="fa fa-user"></i>
             </a>
             <?php } else{?>
-            <a href="<?=site_url('profil')?>" class="">
-                <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="rounded-circle border"  alt="User Image">
+            <a href="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="image-popup">
+                <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="rounded-circle border img-fluid"  alt="User Image">
             </a>
             <?php }?>
             <span class="font-weight-bold"><?=ucfirst($this->fungsi->user_login()->nama)?></span>

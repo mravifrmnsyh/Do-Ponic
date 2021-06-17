@@ -38,9 +38,6 @@
     <ul class="navbar-nav d-none d-md-flex mr-auto">
     </ul>
     <ul class="navbar-nav ">
-    <?php if(($this->fungsi->user_login() == null) or ($this->fungsi->user_login()->level != 1)) {} else {?>
-		<li  class="nav-item"><a href="<?=site_url('dashboard')?>" class="nav-link"> Admin </a></li>
-    <?php }?>
 		<li  class="nav-item"><a href="<?=site_url('blog')?>" class="nav-link"> Blog </a></li>
 		<li  class="nav-item"><a href="#" class="nav-link"> Mitra </a></li>
 		<li  class="nav-item"><a href="<?=site_url('katalog')?>" class="nav-link"> Katalog </a></li>  
@@ -80,8 +77,12 @@
             <?php if($this->fungsi->user_login() == null) { ?>
               <a href="<?=site_url('auth/login')?>">Masuk</a> |  
               <a href="<?=site_url('auth/register')?>"> Daftar</a>
-            <?php }else{ ?>
-              <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
+            <?php }else{ 
+              if($this->fungsi->user_login()->level != 1){?>
+                <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
+              <?php } else{ ?>
+                <a href="<?=site_url('dashboard')?>"><?=ucfirst($this->fungsi->user_login()->username)?></a> |
+            <?php }?>
               <a href="<?=site_url('auth/logout')?>"> Keluar</a>
             <?php }?>
 					</div>

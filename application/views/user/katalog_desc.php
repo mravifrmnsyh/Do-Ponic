@@ -9,7 +9,7 @@
     				<h3><?php echo $contens->nama_brg ?></h3>
     				<div class="rating d-flex">
 							<p class="text-left mr-4">
-								<a href="#" class="mr-2" style="color: #000;">Kategori : <span style="color: #bbb;"><?php echo $contens->kategori ?></span></a>
+								<a href="#" class="mr-2" style="color: #000;">Kategori : <span style="color: #bbb;"><?php echo ucfirst($contens->kategori) ?></span></a>
 							</p>
 							<p class="text-left">
 								<a href="#" class="mr-2" style="color: #000;"><?php echo ' Stok &nbsp; : '.$contens->stok ?> <span style="color: #bbb;">Stok</span></a>
