@@ -7,6 +7,7 @@ class Artikel extends CI_Controller {
 		parent::__construct();
 		$this->load->model('artikel_model');
 		$this->load->library('form_validation');
+		$this->load->library('typography');
 	}
 
 	public function index()

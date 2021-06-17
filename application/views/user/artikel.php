@@ -8,7 +8,9 @@
             <div class="row">
               <h2 class="mb-2"><?php echo $contents->judul ?></h2>
               <div class="meta mb-3">
-                <p style="text-align:justify;"><?php echo $contents->deskripsi ?></p>
+                <p style="text-align:justify;">
+                  <?php echo $this->typography->nl2br_except_pre($contents->deskripsi); ?>
+                </p>
               </div>
             </div>
           <?php endforeach?>

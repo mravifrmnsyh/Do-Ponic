@@ -56,6 +56,11 @@ class Barang extends CI_Controller {
 			echo "window.location='".site_url('barang')."';</script>";
 		}
 	}
+	public function detail($id){
+		$data['dat'] = $this->barang_model->get()->result();
+		$data['row'] = $this->barang_model->detail_brg($id);
+		$this->template->load('user/theme', 'user/katalog_desc', $data);
+	}
 	
 	public function proses(){
 		$config['upload_path']          = './assets/gambar/barang';
