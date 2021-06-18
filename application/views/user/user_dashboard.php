@@ -86,7 +86,7 @@
 		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span><?php echo $contens->tag ?></a></div>
 		                </div>
 		                <h3 class="heading"><a href="#"><?php echo $contens->judul ?></a></h3>
-		                <p><?php echo str_word_count($contens->deskripsi) > 60 ? substr($contens->deskripsi,0,100)."..." : $contens->deskripsi ?></p>
+		                <p><?php echo str_word_count($contens->deskripsi) > 30 ? substr($contens->deskripsi,0,50)."..." : $contens->deskripsi ?></p>
 		                <p><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>" class="btn btn-primary py-2 px-3">Baca Terus</a></p>
 		              </div>
 		            </div>
