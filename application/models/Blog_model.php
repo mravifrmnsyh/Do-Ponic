@@ -5,6 +5,6 @@ class Blog extends CI_Model {
 
 	public function index()	{		
 		$data['row'] = $this->artikel_model->get();
-		$this->template->load('user/theme','user/blog', $data);
+		$this->template->load('user/theme','user/blog', $data);		
 	}
 }
