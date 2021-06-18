@@ -39,7 +39,7 @@
     </ul>
     <ul class="navbar-nav ">
 		<li  class="nav-item"><a href="<?=site_url('blog')?>" class="nav-link"> Blog </a></li>
-		<li  class="nav-item"><a href="#" class="nav-link"> Mitra </a></li>
+		<li  class="nav-item"><a href="<?=site_url('mitra')?>" class="nav-link"> Mitra </a></li>
 		<li  class="nav-item"><a href="<?=site_url('katalog')?>" class="nav-link"> Katalog </a></li>  
 		<li  class="nav-item"><a href="<?=site_url('kontak')?>" class="nav-link"> Kontak </a></li>    
 		<li  class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
@@ -59,7 +59,7 @@
 		<div class="widgets-wrap float-md-right">
 			<div class="widget-header  mr-3">
 				<a href="#" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
-				<span class="badge badge-pill badge-danger notify">0</span>
+				<span class="badge badge-pill badge-danger notify"><?php $keranjang = $this->cart->total_items()?> .</span>        
 			</div>
 			<div class="widget-header icontext">
         <?php if(($this->fungsi->user_login() == null) or ($this->fungsi->user_login()->foto == null)){ ?>
