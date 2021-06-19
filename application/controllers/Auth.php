@@ -16,6 +16,18 @@ class Auth extends CI_Controller {
 
 	public function process(){
 		$post = $this->input->post(null, TRUE);
+		?>
+		<script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
+		<style>
+		body{
+			font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size : 1.124sm;
+			font-weight : normal; 
+		}
+		</style>
+		<body></body>
+		
+		<?php
 		if(isset($_POST['login'])){
 			$this->load->model('user_model');
 			$query = $this->user_model->login($post);
@@ -27,21 +39,42 @@ class Auth extends CI_Controller {
 				);
 				$this->session->set_userdata($params);
 				if($params['level']==1){
-					echo "<script>
-					alert('Selamat, Login Berhasil');
-					window.location='".site_url('dashboard')."';
-					</script>";
+					?>
+					<script>
+					Swal.fire({
+						icon : 'success',
+						title : 'Berhasil',
+						text : 'Login Berhasil'
+						}).then((result) => {
+						window.location='<?=site_url('dashboard')?>';
+					})
+					</script>
+					<?php
 				}else{
-					echo "<script>
-					alert('Selamat, Login Berhasil');
-					window.location='".site_url('user_dashboard')."';
-					</script>";
+					?>
+					<script>
+					Swal.fire({
+						icon : 'success',
+						title : 'Berhasil',
+						text : 'Login Berhasil'
+						}).then((result) => {
+						window.location='<?=site_url('dashboard')?>';
+					})
+					</script>
+					<?php
 				}
 			} else{
-				echo "<script>
-					alert('Login Gagal, Username / Password Salah');
-					window.location='".site_url('auth/login')."';
-				</script>";
+				?>
+					<script>
+					Swal.fire({
+						icon : 'error',
+						title : 'Gagal',
+						text : 'Username / Password Salah'
+						}).then((result) => {
+						window.location='<?=site_url('auth/login')?>';
+					})
+					</script>
+					<?php
 			}
 		} else if(isset($_POST['register'])){
 			if($post['password']==$post['password1']){
@@ -56,30 +89,58 @@ class Auth extends CI_Controller {
 						$post['level'] = 2;
 						$post['foto'] = $this->upload->data('file_name');
 						$this->user_model->add($post);
-						echo "<script>
-						alert('Selamat, Register Berhasil');
-						window.location='".site_url('auth/login')."';
-						</script>";
+						?>
+						<script>
+						Swal.fire({
+							icon : 'success',
+							title : 'Selamat',
+							text : 'Register Berhasil'
+							}).then((result) => {
+							window.location='<?=site_url('auth/login')?>';
+						})
+						</script>
+						<?php
 					}else{
-						echo "<script>
-						alert('Gagal register');
-						window.location='".site_url('auth/register')."';
-						</script>";
+						?>
+						<script>
+						Swal.fire({
+							icon : 'error',
+							title : 'Gagal',
+							text : 'Gagal Register'
+							}).then((result) => {
+							window.location='<?=site_url('auth/register')?>';
+						})
+						</script>
+						<?php
 					}
 				} else {
 					$post['level'] = 2;
 					$post['foto'] = null;
 					$this->user_model->add($post);
-					echo "<script>
-					alert('Selamat, Register Berhasil');
-					window.location='".site_url('auth/login')."';
-					</script>";
+					?>
+					<script>
+					Swal.fire({
+						icon : 'success',
+						title : 'Selamat',
+						text : 'Register Berhasil'
+						}).then((result) => {
+						window.location='<?=site_url('auth/login')?>';
+					})
+					</script>
+					<?php
 				}
 			} else {
-				echo "<script>
-				alert('Pasword tidak sesuai');
-				window.location='".site_url('auth/register')."';
-				</script>";
+				?>
+				<script>
+				Swal.fire({
+					icon : 'error',
+					title : '',
+					text : 'Password tidak sesuai'
+					}).then((result) => {
+					window.location='<?=site_url('auth/register')?>';
+				})
+				</script>
+				<?php
 			}
 		}
 

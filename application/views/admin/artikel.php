@@ -8,7 +8,7 @@
 
     <!-- Main content -->
     <section class="content">
-    
+    <?php $this->view('admin/messages')?>
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">Daftar Artikel</h3>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="box-body table-responsive">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped" id="table1">
                     <thead>
                         <tr>
                             <th style="width:5px">NO</th>
@@ -49,7 +49,7 @@
                                     <a href="<?=site_url('artikel/ubah/'.$data->id_artikel)?>" class="btn btn-success btn-xs">
                                         <i class="fa fa-pencil"> Edit</i>
                                     </a> | 
-                                    <a href="<?=site_url('artikel/hapus/'.$data->id_artikel)?>" onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
+                                    <a href="<?=site_url('artikel/hapus/'.$data->id_artikel)?>" id="btn-hapus" class="btn btn-danger btn-xs">
                                         <i class="fa fa-trash"> Hapus</i>
                                     </a>
                                 </td>

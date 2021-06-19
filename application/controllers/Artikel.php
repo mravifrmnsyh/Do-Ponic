@@ -17,11 +17,17 @@ class Artikel extends CI_Controller {
 	}
 
     public function hapus($id){
+		$item = $this->artikel_model->get($id)->row();
+		if($item->gambar != null){
+			$target_file = './assets/gambar/artikel/'.$item->gambar;
+			unlink($target_file);
+		}
+
         $this->artikel_model->del($id);
         if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('artikel')."';</script>";
+		redirect('artikel');
     }
 
 	public function tambah(){
@@ -57,8 +63,8 @@ class Artikel extends CI_Controller {
 			);
 			$this->template->load('admin/template', 'admin/artikel_form', $data);
 		}else{
-			echo "<script>alert('Data tidak ditemukan');";
-			echo "window.location='".site_url('artikel')."';</script>";
+			$this->session->set_flashdata('gagal', 'Data tidak ditemukan');
+			redirect('artikel');
 		}
 	}
 	
@@ -74,19 +80,17 @@ class Artikel extends CI_Controller {
 				if($this->upload->do_upload('gambar')){
 					$post['gambar'] = $this->upload->data('file_name');
 					$this->artikel_model->add($post);
-					echo "<script>alert('Data Berhasil Disimpan');</script>";
-					echo "<script>window.location='".site_url('artikel')."';</script>";
+					$this->session->set_flashdata('success', 'Data berhasil disimpan');
+					redirect('artikel');
 				}else{
-					echo "<script>alert('Data Gagal Disimpan');</script>";
-					echo "<script>window.location='".site_url('artikel')."';</script>";
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
+					redirect('artikel');
 				}
 			} else {
 				$post['gambar'] = null;
 				$this->artikel_model->add($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('artikel')."';
-				</script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('artikel');
 			}
 		
 		}else if(isset($_POST['ubah'])){
@@ -100,19 +104,17 @@ class Artikel extends CI_Controller {
 
 					$post['gambar'] = $this->upload->data('file_name');
 					$this->artikel_model->edit($post);
-					echo "<script>alert('Data Berhasil Disimpan');</script>";
-					echo "<script>window.location='".site_url('artikel')."';</script>";
+					$this->session->set_flashdata('success', 'Data berhasil disimpan');
+					redirect('artikel');
 				}else{
-					echo "<script>alert('Data Gagal Disimpan');</script>";
-					echo "<script>window.location='".site_url('artikel')."';</script>";
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
+					redirect('artikel');
 				}
 			} else {
 				$post['gambar'] = null;
 				$this->artikel_model->edit($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('artikel')."';
-				</script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('artikel');
 			}
 		}
 	}

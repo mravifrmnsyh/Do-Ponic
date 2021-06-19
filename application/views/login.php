@@ -37,10 +37,10 @@
     <ul class="navbar-nav d-none d-md-flex mr-auto">
     </ul>
     <ul class="navbar-nav ">
-		<li  class="nav-item"><a href="#" class="nav-link"> Blog </a></li>
+    <li  class="nav-item"><a href="<?=site_url('blog')?>" class="nav-link"> Blog </a></li>
 		<li  class="nav-item"><a href="#" class="nav-link"> Mitra </a></li>
-		<li  class="nav-item"><a href="#" class="nav-link"> Katalog </a></li>  
-		<li  class="nav-item"><a href="<?=base_url()?>kontak" class="nav-link"> Kontak </a></li>    
+		<li  class="nav-item"><a href="<?=site_url('katalog')?>" class="nav-link"> Katalog </a></li>  
+		<li  class="nav-item"><a href="<?=site_url('kontak')?>" class="nav-link"> Kontak </a></li>    
 		<li  class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
 	</ul> <!-- list-inline //  -->
   </div> <!-- navbar-collapse .// -->
@@ -90,6 +90,7 @@
 </section> <!-- header-main .// -->
 
     <div class="hold-transition">
+      <?php $this->view('admin/messages')?>
         <div class="login-box">
             <div class="login-logo">
               <img src="<?=base_url()?>assets/user/img/logo.png" class="rounded" width="150px">
@@ -172,6 +173,18 @@
   <script src="<?=base_url()?>assets/user/js/bootstrap-datepicker.js"></script>
   <script src="<?=base_url()?>assets/user/js/scrollax.min.js"></script>
   <script src="<?=base_url()?>assets/user/js/main.js"></script>
+  <script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
+
+  <script>
+    var flash = $('#flash').data('flash');
+    if(flash) {
+      Swal.fire({
+        icon : 'success',
+        title : 'Berhasil',
+        text : flash
+      })
+    } 
+  </script>
     
   </body>
 </html>        

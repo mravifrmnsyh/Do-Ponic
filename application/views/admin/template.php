@@ -4,18 +4,12 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Admin | Do Ponic</title>
-  <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-  <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/font-awesome/css/font-awesome.min.css">
-  <!-- Ionicons -->
   <link rel="stylesheet" href="<?=base_url()?>assets/bower_components/Ionicons/css/ionicons.min.css">
-  <!-- Theme style -->
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="<?=base_url()?>assets/dist/css/skins/_all-skins.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,11 +19,16 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+    <style>
+      .swal2-popup{
+        font-size: 1.6rem !important;
+      }
+    </style>
+
 </head>
 <body class="hold-transition skin-green sidebar-mini">
-<!-- Site wrapper -->
 <div class="wrapper">
 
   <header class="main-header">
@@ -189,6 +188,53 @@
 <script src="<?=base_url()?>assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="<?=base_url()?>assets/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <script src="<?=base_url()?>assets/dist/js/adminlte.min.js"></script>
+<script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
+
+<script src="<?=base_url()?>assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?=base_url()?>assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+      $(document).ready(function(){
+        $('#table1').DataTable()
+      })
+
+      var flash = $('#flash').data('flash');
+      var flush = $('#flush').data('flush');
+      if(flash) {
+        Swal.fire({
+          icon : 'success',
+          title : 'Berhasil',
+          text : flash
+        })
+      } 
+      if(flush) {
+        Swal.fire({
+          icon : 'error',
+          title : 'Gagal',
+          text : flush
+        })
+      } 
+
+      $(document).on('click', '#btn-hapus', function(e){
+        e.preventDefault();
+        var link = $(this).attr('href');
+
+        Swal.fire({
+              title: 'Apakah anda yakin',
+              text: "Data akan dihapus",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Ya, hapus!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location = link;
+            }
+})
+      })
+
+</script>
 
 </body>
 </html>

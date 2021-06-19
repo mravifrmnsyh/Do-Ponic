@@ -20,6 +20,7 @@
             <div class="box-body">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
+                        <?php echo form_open_multipart('users/tambah');?>
                         <form action="" class="" method="post">
                             <div class="form-group <?=form_error('nama')? 'has-error' : null?>">
                                 <label for="">Nama Lengkap *</label>
@@ -62,7 +63,7 @@
                                 <button type="submit" class="btn btn-success btn-flat">Simpan</button>
                                 <button type="reset" class="btn btn-danger btn-flat">Reset</button>
                             </div>
-                        </form>
+                        <?php echo form_close()?>
                     </div>
                 </div>
             </div>

@@ -18,11 +18,17 @@ class Barang extends CI_Controller {
 	}
 
     public function hapus($id){
+		$item = $this->barang_model->get($id)->row();
+		if($item->gambar != null){
+			$target_file = './assets/gambar/barang/'.$item->gambar;
+			unlink($target_file);
+		}
+
         $this->barang_model->del($id);
         if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('barang')."';</script>";
+		redirect('barang');
     }
 
 	public function tambah(){
@@ -52,8 +58,8 @@ class Barang extends CI_Controller {
 			);
 			$this->template->load('admin/template', 'admin/barang_form', $data);
 		}else{
-			echo "<script>alert('Data tidak ditemukan');";
-			echo "window.location='".site_url('barang')."';</script>";
+			$this->session->set_flashdata('gagal', 'Data tidak ditemukan');
+			redirect('barang');
 		}
 	}
 	
@@ -69,19 +75,17 @@ class Barang extends CI_Controller {
 				if($this->upload->do_upload('gambar')){
 					$post['gambar'] = $this->upload->data('file_name');
 					$this->barang_model->add($post);
-					echo "<script>alert('Data Berhasil Disimpan');</script>";
-					echo "<script>window.location='".site_url('barang')."';</script>";
+					$this->session->set_flashdata('success', 'Data berhasil disimpan');
+					redirect('barang');
 				}else{
-					echo "<script>alert('Data Gagal Disimpan');</script>";
-					echo "<script>window.location='".site_url('barang')."';</script>";
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
+					redirect('barang');
 				}
 			} else {
 				$post['gambar'] = null;
 				$this->barang_model->add($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('barang')."';
-				</script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('barang');
 			}
 		
 		}else if(isset($_POST['ubah'])){
@@ -95,19 +99,17 @@ class Barang extends CI_Controller {
 
 					$post['gambar'] = $this->upload->data('file_name');
 					$this->barang_model->edit($post);
-					echo "<script>alert('Data Berhasil Disimpan');</script>";
-					echo "<script>window.location='".site_url('barang')."';</script>";
+					$this->session->set_flashdata('success', 'Data berhasil disimpan');
+					redirect('barang');
 				}else{
-					echo "<script>alert('Data Gagal Disimpan');</script>";
-					echo "<script>window.location='".site_url('barang')."';</script>";
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
+					redirect('barang');
 				}
 			} else {
 				$post['gambar'] = null;
 				$this->barang_model->edit($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('barang')."';
-				</script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('barang');
 			}
 		}
 	}

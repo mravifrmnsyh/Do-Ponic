@@ -9,6 +9,7 @@
     <!-- Main content -->
     <section class="content">
         <?php $this->view('admin/messages')?>
+        
         <div class="box">
             <div class="box-header">
                 <h3 class="box-title">Data Users</h3>
@@ -19,7 +20,7 @@
                 </div>
             </div>
             <div class="box-body table-responsive">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped" id="table1">
                     <thead>
                         <tr>
                             <th style="width:5px">No</th>
@@ -48,15 +49,12 @@
                                     <?php }?>
                                 </td>
                                 <td class="text-center" width="150px">
-                                    <form action="<?=site_url('users/hapus')?>" method="post">
-                                        <a href="<?=site_url('users/ubah/'.$data->id_user)?>" class="btn btn-success btn-xs">
-                                            <i class="fa fa-pencil"> Edit</i>
-                                        </a> | 
-                                        <input type="hidden" name="id_user" value="<?=$data->id_user?>">
-                                        <button onclick="return confirm('Apakah anda yakin?')" class="btn btn-danger btn-xs">
-                                            <i class="fa fa-trash"> Hapus</i>
-                                        </button>
-                                    </form>
+                                    <a href="<?=site_url('users/ubah/'.$data->id_user)?>" class="btn btn-success btn-xs">
+                                        <i class="fa fa-pencil"> Edit</i>
+                                    </a> | 
+                                    <a href="<?=site_url('users/hapus/'.$data->id_user)?>" id="btn-hapus" class="btn btn-danger btn-xs">
+                                        <i class="fa fa-trash"> Hapus</i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php } ?>

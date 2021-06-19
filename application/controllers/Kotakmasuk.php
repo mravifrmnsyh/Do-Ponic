@@ -20,9 +20,9 @@ class Kotakmasuk extends CI_Controller {
     public function hapus($id){
         $this->kotakmasuk_model->del($id);
         if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('kotakmasuk')."';</script>";
+		redirect('kotakmasuk');
     }
 
 	public function tambah(){
@@ -45,10 +45,10 @@ class Kotakmasuk extends CI_Controller {
 			$this->kotakmasuk_model->add($post);
 		} 
 		if($this->db->affected_rows()>0){
-			echo "<script>alert('Pesan Berhasil Dikirim');</script>";
-			echo "<script>window.location='".site_url('kontak')."';</script>";
+			$this->session->set_flashdata('success', 'Pesan berhasil dikirim');
+			redirect('kontak');
 		}
-		echo "<script>alert('Silakan login untuk kirim pesan!!');</script>";
-		echo "<script>window.location='".site_url('login')."';</script>";
-	}
+		$this->session->set_flashdata('warning', 'Login untuk kirim pesan');
+		redirect('login');
+		}
 }

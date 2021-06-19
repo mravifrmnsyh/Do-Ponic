@@ -46,22 +46,17 @@ class Users extends CI_Controller {
 					$post['foto'] = $this->upload->data('file_name');
 					$this->user_model->add($post);
 					if($this->db->affected_rows()>0){
-						// echo "<script>alert('Data Berhasil Disimpan');</script>";
 						$this->session->set_flashdata('success', 'Data berhasil disimpan');
 					}
 				}else{
-					// echo "<script>alert('Data gagal disimpan');</script>";
-					$this->session->set_flashdata('success', 'Data berhasil disimpan');
+					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
 				}
-				// echo "<script>window.location='".site_url('users')."';</script>";
 				redirect('users');
 			} else {
 				$post['foto'] = null;
 				$this->user_model->add($post);
-				echo "<script>
-				alert('Data berhasil disimpan');
-				window.location='".site_url('users')."';
-				</script>";
+				$this->session->set_flashdata('success', 'Data berhasil disimpan');
+				redirect('users');
 			}
 		}
 
@@ -101,9 +96,8 @@ class Users extends CI_Controller {
 				$data['row'] = $query->row();
 				$this->template->load('admin/template', 'admin/user_edit', $data);
 			}else{
-				echo "<script>alert('Data tidak ditemukan');";
-				echo "window.location='".site_url('users')."';</script>";
-				// redirect('users');
+				$this->session->set_flashdata('gagal', 'Data tidak ditemukan');
+				redirect('users');
 			}
 		}else{
 			if($_FILES['foto']['name']!=null){
@@ -117,35 +111,32 @@ class Users extends CI_Controller {
 					$post['foto'] = $this->upload->data('file_name');
 					$this->user_model->edit($post);
 					if($this->db->affected_rows()>0){
-						// echo "<script>alert('Data Berhasil Disimpan');</script>";
 						$this->session->set_flashdata('success', 'Data berhasil disimpan');
 					}
 				}else{
-					// echo "<script>alert('Data gagal disimpan');</script>";
 					$this->session->set_flashdata('gagal', 'Data gagal disimpan');
 				}
-				// echo "<script>window.location='".site_url('users')."';</script>";
-
 				redirect('users');
 			} else {
 				$post['foto'] = null;
 				$this->user_model->edit($post);
-				// echo "<script>
-				// alert('Data berhasil disimpan');
-				// window.location='".site_url('users')."';
-				// </script>";
 				$this->session->set_flashdata('success', 'Data berhasil disimpan');
 				redirect('users');
 			}
 		}
 
 	}
-	public function hapus(){
-		$id = $this->input->post('id_user');
+	public function hapus($id){
+		$item = $this->user_model->get($id)->row();
+		if($item->foto != null){
+			$target_file = './assets/gambar/user/'.$item->foto;
+			unlink($target_file);
+		}
+
 		$this->user_model->del($id);
 		if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('users')."';</script>";
+		redirect('users');
 	}
 }

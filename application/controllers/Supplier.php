@@ -20,9 +20,9 @@ class Supplier extends CI_Controller {
     public function hapus($id){
         $this->supplier_model->del($id);
         if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Dihapus');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil dihapus');
 		}
-		echo "<script>window.location='".site_url('supplier')."';</script>";
+		redirect('supplier');
     }
 
 	public function tambah(){
@@ -49,8 +49,8 @@ class Supplier extends CI_Controller {
 			);
 			$this->template->load('admin/template', 'admin/supplier_form', $data);
 		}else{
-			echo "<script>alert('Data tidak ditemukan');";
-			echo "window.location='".site_url('supplier')."';</script>";
+			$this->session->set_flashdata('warning', 'Data berhasil tidak ditemukan');
+			redirect('supplier');
 		}
 	}
 
@@ -62,9 +62,8 @@ class Supplier extends CI_Controller {
 			$this->supplier_model->edit($post);
 		} 
 		if($this->db->affected_rows()>0){
-			echo "<script>alert('Data Berhasil Disimpan');</script>";
+			$this->session->set_flashdata('success', 'Data berhasil disimpan');
 		}
-		echo "<script>window.location='".site_url('supplier')."';</script>";
-
+		redirect('supplier');
 	}
 }
