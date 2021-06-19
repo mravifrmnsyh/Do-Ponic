@@ -38,7 +38,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $num=1; foreach($supplier as $mitra) { ?>
+                        <?php $num=1; foreach($supplier->result() as $mitra) { ?>
                             <tr>
                                 <td><?php echo $num++ ?></td>
                                 <td><?php echo $mitra->nama ?></td>
