@@ -59,7 +59,7 @@
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?=base_url()?>assets/dist/img/user.png" class="img-circle" alt="User Image">
+                <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="img-circle" alt="User Image">
 
                 <p>
                 <?=ucfirst($this->fungsi->user_login()->nama)?> - Do Ponic
@@ -73,7 +73,7 @@
                   <a href="<?=site_url('user_dashboard')?>" class="btn btn-default btn-flat">User Dashboard</a>
                 </div>
                 <div class="pull-right">
-                  <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?=site_url('auth/logout')?>" class="btn btn-default btn-flat">Keluar</a>
                 </div>
               </li>
             </ul>
@@ -96,7 +96,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?=base_url()?>assets/dist/img/user.png" class="img-circle" alt="User Image">
+          <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?=ucfirst($this->fungsi->user_login()->username)?></p>
@@ -156,7 +156,9 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="#"><i class="fa fa-circle-o"></i> Stok Tersedia</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Stok Terjual</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Stok Terjual</a></li><li>
+              <a href="#"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            
           </ul>
         </li>
         

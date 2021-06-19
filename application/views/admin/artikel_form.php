@@ -1,10 +1,3 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-      <h1>
-        Daftar
-        <small>Artikel</small>
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">

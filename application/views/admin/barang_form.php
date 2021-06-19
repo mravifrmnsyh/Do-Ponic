@@ -1,17 +1,10 @@
-<!-- Content Header (Page header) -->
-<section class="content-header">
-      <h1>
-        Data
-        <small>Barang</small>
-      </h1>
-    </section>
 
     <!-- Main content -->
     <section class="content">
 
         <div class="box">
             <div class="box-header">
-                <h3 class="box-title"><?=ucfirst($page)?> Barang</h3>
+                <h3 class="box-title"><?=ucfirst($page)?> Produk</h3>
                 <div class="pull-right">
                     <a href="<?=site_url('barang')?>" class="btn btn-warning btn-flat">
                         <i class="fa fa-undo"> Kembali</i>
@@ -23,11 +16,11 @@
                     <div class="col-md-4 col-md-offset-4">
                         <?php echo form_open_multipart('barang/proses');?>
                             <div class="form-group">
-                                <label for="">Id Barang</label>
+                                <label for="">Id Produk</label>
                                 <input type="text" name="id_brg" readonly value="<?=$row->id_brg?>" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label>Nama Barang</label>
+                                <label>Nama Produk</label>
                                 <input type="text" name="nama_brg" value="<?=$row->nama_brg?>" class="form-control">
                             </div>
 

@@ -13,7 +13,7 @@ class Artikel extends CI_Controller {
 	public function index()
 	{
 		$data['row'] = $this->artikel_model->get();
-		$this->template->load('admin/template', 'admin/artikel', $data);					
+		$this->template->load('admin/template', 'admin/artikel', $data);		
 	}
 
     public function hapus($id){

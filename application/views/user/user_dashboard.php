@@ -21,14 +21,14 @@
 		</section>
 
     <section class="ftco-section">
-      <div class="container">
-              <div class="row justify-content-center mb-3 pb-3">
-        <div class="col-md-12 heading-section text-center ftco-animate">
-            <span class="subheading">Produk Pilihan</span>
-          <h4>Produk peralatan kebun, bibit buah dan sayuran, buah dan sayur hingga hasil olahan</h4>
-        </div>
-      </div>   		
-      </div>
+    <div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section ftco-animate">
+            <h2 class="subheading text-right">PRODUK TERBARU</h2>
+            <hr>
+          </div>
+        </div>   		
+    	</div>
       <div class="container">
           <div class="row">
       
@@ -61,17 +61,38 @@
           </div>
       </div>
   </section>
-      
-      <section class="ftco-section img" style="background-image: url(<?=base_url()?>assets/user/img/);">
+
+  <section>
+  <div class="container">
+    <div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section ftco-animate">
+            <h2 class="subheading text-right">ARTIKEL TERBARU</h2>
+            <hr>
+          </div>
+        </div>   		
+    	</div>
       <div class="container">
-              <div class="row justify-content-end">
-        <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-            <span class="subheading">Promo Spesial</span>
-          <h2 class="mb-4">Deal of the day</h2>
-          <p>Harga khusus untuk produk pilihan do Ponic</p>
-          <h3><a href="#">Paket Tanam</a></h3>
-          <span class="price">Rp. 115.000,00- <a href="#">Sekarang hanya Rp. 35.000,00-</a></span>
-      </div>   		
+          <div class="row">
+      
+          <?php $i=0; foreach ($artikel as $contens):?>
+			<div class="col-md-12 col-lg-6 ftco-animate">
+		            <div class="blog-entry align-self-stretch d-md-flex">
+		              <a href="" class="block-20" style="background-image: url('<?php echo base_url().'/assets/gambar/artikel/'.$contens->gambar ?>');">
+		              </a>
+		              <div class="text d-block pl-md-4">
+		              	<div class="meta mb-3">
+		                  <div><a href="#"><?php echo $contens->date ?></a></div>
+		                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span><?php echo $contens->tag ?></a></div>
+		                </div>
+		                <h3 class="heading"><a href="#"><?php echo $contens->judul ?></a></h3>
+		                <p><?php echo str_word_count($contens->deskripsi) > 30 ? substr($contens->deskripsi,0,50)."..." : $contens->deskripsi ?></p>
+		                <p><a href="<?=site_url('artikel/detail/'.$contens->id_artikel)?>" class="btn btn-primary py-2 px-3">Baca Terus</a></p>
+		              </div>
+		            </div>
+		          </div>
+                      <?php $i++; if($i==2){break;}; endforeach;?>
+          </div>
       </div>
   </section>
 
