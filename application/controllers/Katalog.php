@@ -36,4 +36,13 @@ class Katalog extends CI_Controller {
 		$this->cart->insert($data);
 		redirect('katalog');
 	}
+
+	public function detailKeranjang(){
+		$this->template->load('user/theme', 'user/keranjang');
+	}
+
+	public function hapusKeranjang(){
+		$this->cart->destroy();
+		redirect('katalog/detailKeranjang');
+	}
 }
