@@ -23,4 +23,17 @@ class Katalog extends CI_Controller {
 		$data['row'] = $this->barang_model->detail_brg($id);
 		$this->template->load('user/theme', 'user/katalog_desc', $data);
 	}
+
+	public function tambahKeranjang($id){
+		$barang = $this->barang_model->find($id);
+
+		$data = array(
+			'id' => $barang->id_brg,
+			'qty' => 1,
+			'price' => $barang->harga,
+			'name' => $barang->nama_brg
+		);
+		$this->cart->insert($data);
+		redirect('katalog');
+	}
 }

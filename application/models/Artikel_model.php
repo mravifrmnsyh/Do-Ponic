@@ -12,6 +12,12 @@ class Artikel_model extends CI_Model {
         return $query;
     }
 
+    public function artikelDesc(){
+        $this->db->order_by('id_artikel', 'DESC');
+        $query = $this->db->get('tb_artikel');
+        return $query;
+    }
+
     public function del($id){
 		$this->db->where('id_artikel', $id);
 		$this->db->delete('tb_artikel');

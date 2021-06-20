@@ -47,8 +47,8 @@ class Artikel extends CI_Controller {
 	}
 
 	public function detail($id){
-		$data['dat'] = $this->artikel_model->get()->result();
 		$data['row'] = $this->artikel_model->detail($id);
+		$data['desc'] = $this->artikel_model->artikelDesc();
 		$this->template->load('user/theme', 'user/artikel', $data);
 	}
 	

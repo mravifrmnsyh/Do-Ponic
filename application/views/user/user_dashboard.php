@@ -32,7 +32,7 @@
       <div class="container">
           <div class="row">
       
-         <?php  $i=0;  foreach ($barang as $brg):?>
+         <?php  $i=0;  foreach ($barang->result() as $brg):?>
               <div class="col-md-6 col-lg-3 ftco-animate">
                   <div class="product">
                       <a href="#" class="img-prod"><img class="img-fluid" src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
@@ -75,7 +75,7 @@
       <div class="container">
           <div class="row">
       
-          <?php $i=0; foreach ($artikel as $contens):?>
+          <?php $i=0; foreach ($desc->result() as $contens):?>
 			<div class="col-md-12 col-lg-6 ftco-animate">
 		            <div class="blog-entry align-self-stretch d-md-flex">
 		              <a href="" class="block-20" style="background-image: url('<?php echo base_url().'/assets/gambar/artikel/'.$contens->gambar ?>');">
@@ -91,7 +91,7 @@
 		              </div>
 		            </div>
 		          </div>
-                      <?php $i++; if($i==2){break;}; endforeach;?>
+              <?php $i++; if($i==2){break;}; endforeach;?>
           </div>
       </div>
   </section>

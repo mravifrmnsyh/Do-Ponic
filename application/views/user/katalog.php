@@ -34,9 +34,7 @@
                                   <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>" class="add-to-cart d-flex justify-content-center align-items-center text-center">
                                       <span><i class="ion-ios-menu"></i></span>
                                   </a>
-                                  <a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-                                      <span><i class="ion-ios-cart"></i></span>
-                                  </a>
+                                    <?php echo anchor('katalog/tambahKeranjang/'.$brg->id_brg,'<div class="btn btn-primary buy-now d-flex justify-content-center align-items-center mx-1"><span><i class="ion-ios-cart"></i></span> </div>')?>
                               </div>
                           </div>
                       </div>
