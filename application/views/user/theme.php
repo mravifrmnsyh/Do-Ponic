@@ -143,6 +143,29 @@
   <script src="<?=base_url()?>assets/user/js/bootstrap-datepicker.js"></script>
   <script src="<?=base_url()?>assets/user/js/scrollax.min.js"></script>
   <script src="<?=base_url()?>assets/user/js/main.js"></script>
+  
+  <script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
+
     
+  <script>
+  $(document).on('click', '#byr', function(e){
+        e.preventDefault();
+        var link = $(this).attr('href');
+
+        Swal.fire({
+              title: 'Pembayaran',
+              text: "Login untuk melanjutkan pembayaran",
+              icon: 'warning',
+              showCancelButton: true,
+              confirmButtonColor: '#3085d6',
+              cancelButtonColor: '#d33',
+              confirmButtonText: 'Ya, Login!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              window.location = link;
+            }
+    })
+  })
+  </script>
   </body>
 </html>

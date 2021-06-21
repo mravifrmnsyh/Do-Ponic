@@ -45,4 +45,9 @@ class Katalog extends CI_Controller {
 		$this->cart->destroy();
 		redirect('katalog/detailKeranjang');
 	}
+
+	public function hapusProduk($id){
+		$this->cart->remove($id);
+		redirect('katalog/detailKeranjang');
+	}
 }

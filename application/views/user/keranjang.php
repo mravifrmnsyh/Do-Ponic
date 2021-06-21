@@ -17,7 +17,7 @@
                             <?php foreach ($this->cart->contents() as $items):?>
 						    <tbody>
 						      <tr class="text-center">
-						        <td class="product-remove"><a href="<?=site_url('katalog/hapusKeranjang'.$items['name']);?>"><span class="ion-ios-close"></span></a></td>
+						        <td class="product-remove"><a href="<?=site_url('katalog/hapusProduk/'.$items['rowid']);?>"><span class="ion-ios-close"></span></a></td>
 						        
 						        <td class="product-name">
 						        	<h3><?= $items['name'] ?></h3>
@@ -35,8 +35,9 @@
 						    </tbody>
                             <?php endforeach ?>
 						  </table>
-
-
+							<?php if ($this->cart->total_items() == 0){}else{?>
+						  <p><a href="<?=site_url('katalog/hapusKeranjang');?>" class="btn btn-primary py-3 px-4">Hapus Semua Produk</a></p>
+							<?php } ?>
 					  <!-- </div> -->
     			<!-- </div> -->
     		</div>
@@ -84,7 +85,7 @@
     					<h3>Biaya Total</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span><?= number_format($this->cart->total() ,0,',','.') ?></span>
+    						<span>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></span>
     					</p>
     					<p class="d-flex">
     						<span>Biaya Kirim</span>
@@ -100,8 +101,12 @@
     						<span><a>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></a></span>
     					</p>
     				</div>
-    				<p><a href="" class="btn btn-primary py-3 px-4">Bayar</a></p>
-    			</div>
+					<?php if($this->fungsi->user_login() == null){?>
+						<p><a href="<?=site_url('auth/login/')?>" id="byr" class="btn btn-primary py-3 px-4">Bayar</a></p>
+					<?php } else { ?>
+						<p><a href="<?=site_url('katalog/pembayaran/')?>" class="btn btn-primary py-3 px-4">Bayar</a></p>
+					<?php }?>
+				</div>
     		</div>
 			</div>  
     </section>

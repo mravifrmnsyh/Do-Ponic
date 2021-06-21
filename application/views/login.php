@@ -175,16 +175,6 @@
   <script src="<?=base_url()?>assets/user/js/main.js"></script>
   <script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
 
-  <script>
-    var flash = $('#flash').data('flash');
-    if(flash) {
-      Swal.fire({
-        icon : 'success',
-        title : 'Berhasil',
-        text : flash
-      })
-    } 
-  </script>
     
   </body>
 </html>        
