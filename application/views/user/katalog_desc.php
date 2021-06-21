@@ -15,24 +15,12 @@
 								<a href="#" class="mr-2" style="color: #000;"><?php echo ' Stok &nbsp; : '.$contens->stok ?> <span style="color: #bbb;">Stok</span></a>
 							</p>
 						</div>
-					<p class="price"><span>Rp. <?php echo number_format($contens->harga, 0,',','.') ?></span></p>
+					<h4 class="price">Rp. <?php echo number_format($contens->harga, 0,',','.') ?></h4>
+			</br>
+					<h6>DETAIL PRODUK</h6>
 					<p><?php echo  $contens->keterangan?></p>
 		
 				<div class="row mt-4">
-					<div class="w-100"></div>
-						<div class="input-group col-md-6 d-flex mb-3">
-							<span class="input-group-btn mr-2">
-								<button type="button" class="quantity-left-minus btn"  data-type="minus" data-field="">
-									<i class="ion-ios-remove"></i>
-								</button>
-							</span>
-							<input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="0" max=" <?php echo $contens->stok ?>">
-							<span class="input-group-btn ml-2">
-								<button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
-									<i class="ion-ios-add"></i>
-								</button>
-							</span>
-						</div>
 					<div class="w-100"></div>
 				</div>
 				<?php echo anchor('katalog/tambahKeranjang/'.$contens->id_brg,'<div class="btn btn-black py-3 px-5">Tambah ke Keranjang</div>')?>
