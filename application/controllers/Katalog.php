@@ -50,4 +50,8 @@ class Katalog extends CI_Controller {
 		$this->cart->remove($id);
 		redirect('katalog/detailKeranjang');
 	}
+
+	public function checkout(){
+		$this->template->load('user/theme', 'user/checkout');
+	}
 }

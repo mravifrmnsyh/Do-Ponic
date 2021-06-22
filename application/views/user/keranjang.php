@@ -82,7 +82,7 @@
     			</div>
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
-    					<h3>Biaya Total</h3>
+    					<h3>Total Biaya</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
     						<span>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></span>
@@ -104,7 +104,7 @@
 					<?php if($this->fungsi->user_login() == null){?>
 						<p><a href="<?=site_url('auth/login/')?>" id="byr" class="btn btn-primary py-3 px-4">Bayar</a></p>
 					<?php } else { ?>
-						<p><a href="<?=site_url('katalog/pembayaran/')?>" class="btn btn-primary py-3 px-4">Bayar</a></p>
+						<p><a href="<?=site_url('katalog/checkout/')?>" class="btn btn-primary py-3 px-4">Bayar</a></p>
 					<?php }?>
 				</div>
     		</div>

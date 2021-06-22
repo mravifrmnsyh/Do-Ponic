@@ -154,15 +154,13 @@
     <!-- /.content-wrapper -->
 
     
-  <section class="ftco-section img" style="background-image: url(<?=base_url()?>assets/user/img/gambar-1.jpg);">
+  <section class="ftco-section img" style="background-image: url(<?=base_url()?>assets/user/img/;">
       <div class="container">
               <div class="row justify-content-end">
         <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-            <span class="subheading">Promo Spesial</span>
-          <h2 class="mb-4">Deal of the day</h2>
-          <p>Harga khusus untuk produk pilihan do Ponic</p>
-          <h3><a href="#">Paket Tanam</a></h3>
-          <span class="price">Rp. 115.000,00- <a href="#">Sekarang hanya Rp. 35.000,00-</a></span>
+            <span class="subheading">Promo Pak Tani</span>
+          <h2 class="mb-4">Gratis Ongkir ke Seluruh Indonesia</h2>
+          <p>Untuk Setiap Pembelian di website do Ponic</p>
       </div>   		
       </div>
   </section>

@@ -4,7 +4,7 @@
           <div class="col-md-9 ftco-animate text-center">
           	<p class="breadcrumbs"><span class="mr-2"><a>Ayo</a></span> <span>Bergabung</span></p>
             <h1 class="mb-0 bread">Membangun Pasar Bersama do Ponic</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a class="btn btn-primary" href="">Daftar di sini</a></span> <span>menjadi salah satu mitra kami</span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a class="btn btn-primary" href="<?=base_url()?>kontak">Hubungi Kami</a></span> <span>daftarkan diri Anda menjadi salah satu mitra kami</span></p>
           </div>
         </div>
       </div>
