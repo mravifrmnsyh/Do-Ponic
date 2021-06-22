@@ -37,7 +37,7 @@
                                         <option value="">- Pilih -</option>
                                     <?php } ?>
                                     <option value="alat" <?=$kategori == 'alat' ? 'selected' : null?>> Alat </option>
-                                    <option value="bibit" <?=$kategori == 'bibit' ? 'selected' : null?>> Bibit </option>
+                                    <option value="benih" <?=$kategori == 'benih' ? 'selected' : null?>> Benih </option>
                                     <option value="buah" <?=$kategori == 'buah' ? 'selected' : null?>> Buah </option>
                                 </select>
                             </div>
