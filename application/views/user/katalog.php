@@ -7,7 +7,7 @@
                         <ul class="product-category">
                             <li><button class="btn btn-primary" type="submit" name="all">All</button></li>
                             <li><button class="btn btn-primary" type="submit" name="alat">Alat</button></li>
-                            <li><button class="btn btn-primary" type="submit" name="bibit">Bibit</button></li>
+                            <li><button class="btn btn-primary" type="submit" name="benih">Benih</button></li>
                             <li><button class="btn btn-primary" type="submit" name="buah">Buah</button></li>
                         </ul>
                     </div>
