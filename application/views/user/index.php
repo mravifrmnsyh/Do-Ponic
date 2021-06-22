@@ -9,25 +9,25 @@
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/animate.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/animate.css">
     
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/magnific-popup.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/aos.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/ui.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/aos.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/ui.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/ionicons.min.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/jquery.timepicker.css">
 
     
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/flaticon.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/icomoon.css">
-    <link rel="stylesheet" href="<?=base_url()?>assets/user/css/style.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/flaticon.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/icomoon.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/user/css/style.css">
     <link rel="stylesheet" href="https://cedeen.netlify.app/font-awesome-5-pro/css/all.min.css" />
     
     
@@ -38,10 +38,10 @@
     <ul class="navbar-nav d-none d-md-flex mr-auto">
     </ul>
     <ul class="navbar-nav ">
-		<li  class="nav-item"><a href="<?=site_url('blog')?>" class="nav-link"> Blog </a></li>
-		<li  class="nav-item"><a href="<?=site_url('mitra')?>" class="nav-link"> Mitra </a></li>
-		<li  class="nav-item"><a href="<?=site_url('katalog')?>" class="nav-link"> Katalog </a></li>  
-		<li  class="nav-item"><a href="<?=site_url('kontak')?>" class="nav-link"> Kontak </a></li>    
+		<li  class="nav-item"><a href="<?= site_url("blog") ?>" class="nav-link"> Blog </a></li>
+		<li  class="nav-item"><a href="<?= site_url("mitra") ?>" class="nav-link"> Mitra </a></li>
+		<li  class="nav-item"><a href="<?= site_url("katalog") ?>" class="nav-link"> Katalog </a></li>  
+		<li  class="nav-item"><a href="<?= site_url("kontak") ?>" class="nav-link"> Kontak </a></li>    
 		<li  class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
 	</ul> <!-- list-inline //  -->
   </div> <!-- navbar-collapse .// -->
@@ -52,39 +52,38 @@
 	<div class="container">
 <div class="row align-items-center">
 	<div class="col-lg-2 col-6">
-		<a href="<?=base_url()?>" class="navbar-brand">do Ponic
+		<a href="<?= base_url() ?>" class="navbar-brand">do Ponic
 		</a> <!-- brand-wrap.// -->
 	</div>
 	<div class="col-lg-10 col-sm-6 col-12">
 		<div class="widgets-wrap float-md-right">
 			<div class="widget-header  mr-3">
-				<a href="<?=site_url('katalog/detailKeranjang');?>" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
-				<span class="badge badge-pill badge-danger notify"><?=$this->cart->total_items();?> </span>        
+				<a href="<?= site_url("katalog/detailKeranjang") ?>" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
+				<span class="badge badge-pill badge-danger notify"><?= $this->cart->total_items() ?> </span>        
 			</div>
 			<div class="widget-header icontext">
-        <?php if(($this->fungsi->user_login() == null) or ($this->fungsi->user_login()->foto == null)){ ?>
-          <a href="<?=site_url('profil')?>" class="icon icon-sm rounded-circle border">
+        <?php if (
+            $this->fungsi->user_login() == null or
+            $this->fungsi->user_login()->foto == null) { ?>
+          <a href="<?= site_url("profil") ?>" class="icon icon-sm rounded-circle border">
             <i class="fa fa-user"></i>
           </a>
-        <?php } else{?>
-          <a href="<?=site_url('profil')?>" class="">
-            <img src="<?=base_url()?>assets/gambar/user/<?=$this->fungsi->user_login()->foto?>" class="icon icon-sm rounded-circle border"  alt="User Image">
+        <?php } else { ?>
+          <a href="<?= site_url("profil") ?>" class="">
+            <img src="<?= base_url() ?>assets/gambar/user/<?= $this->fungsi->user_login()->foto ?>" class="icon icon-sm rounded-circle border"  alt="User Image">
           </a>
-        <?php }?>
+        <?php } ?>
 				<div class="text">
 					<span class="text-muted">Selamat Datang!</span>
 					<div> 
-            <?php if($this->fungsi->user_login() == null) { ?>
-              <a href="<?=site_url('auth/login')?>">Masuk</a> |  
-              <a href="<?=site_url('auth/register')?>"> Daftar</a>
-            <?php }else{ 
-              if($this->fungsi->user_login()->level != 1){?>
-                <a href="#"><?=ucfirst($this->fungsi->user_login()->username)?></a> | 
-              <?php } else{ ?>
-                <a href="<?=site_url('dashboard')?>"><?=ucfirst($this->fungsi->user_login()->username)?></a> |
-            <?php }?>
-              <a href="<?=site_url('auth/logout')?>"> Keluar</a>
-            <?php }?>
+            <?php if ($this->fungsi->user_login() == null) { ?>
+              <a href="<?= site_url("auth/login") ?>">Masuk</a> |  
+              <a href="<?= site_url("auth/register") ?>"> Daftar</a>
+            <?php } else {if ($this->fungsi->user_login()->level != 1) { ?>
+                <a href="#"><?= ucfirst($this->fungsi->user_login()->username) ?></a> | <?php } else { ?>
+                <a href="<?= site_url("dashboard") ?>"><?= ucfirst($this->fungsi->user_login()->username) ?></a> | <?php } ?>
+              <a href="<?= site_url("auth/logout") ?>"> Keluar</a>
+            <?php } ?>
 					</div>
 				</div>
 			</div>
@@ -96,7 +95,7 @@
 
 <section id="home-section" class="hero">
         <div class="home-slider owl-carousel">
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-6.jpg);">
+        <div class="slider-item" style="background-image: url(<?= base_url() ?>assets/user/img/gambar-6.jpg);">
             <div class="overlay"></div>
           <div class="container">
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -110,7 +109,7 @@
           </div>
         </div>
 
-        <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-5.jpg);">
+        <div class="slider-item" style="background-image: url(<?= base_url() ?>assets/user/img/gambar-5.jpg);">
             <div class="overlay"></div>
           <div class="container">
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -124,7 +123,7 @@
           </div>
         </div>
 
-              <div class="slider-item" style="background-image: url(<?=base_url()?>assets/user/img/gambar-2.jpg);">
+              <div class="slider-item" style="background-image: url(<?= base_url() ?>assets/user/img/gambar-2.jpg);">
             <div class="overlay"></div>
           <div class="container">
             <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -147,14 +146,14 @@
 
     <div class="content-wrapper">
       <div class="container">
-          <?php echo $contents ?>
+          <?php echo $contents; ?>
       </div>
       <!-- /.container -->
     </div>
     <!-- /.content-wrapper -->
 
     
-  <section class="ftco-section img" style="background-image: url(<?=base_url()?>assets/user/img/;">
+  <section class="ftco-section img" style="background-image: url(<?= base_url() ?>assets/user/img/;">
       <div class="container">
               <div class="row justify-content-end">
         <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
@@ -191,20 +190,20 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="<?=base_url()?>assets/user/js/jquery.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/popper.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/bootstrap.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery.easing.1.3.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery.waypoints.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery.stellar.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/owl.carousel.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery.magnific-popup.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/aos.js"></script>
-  <script src="<?=base_url()?>assets/user/js/jquery.animateNumber.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/bootstrap-datepicker.js"></script>
-  <script src="<?=base_url()?>assets/user/js/scrollax.min.js"></script>
-  <script src="<?=base_url()?>assets/user/js/main.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/popper.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/bootstrap.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.easing.1.3.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.waypoints.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.stellar.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/owl.carousel.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/aos.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/jquery.animateNumber.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/bootstrap-datepicker.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/scrollax.min.js"></script>
+  <script src="<?= base_url() ?>assets/user/js/main.js"></script>
     
   </body>
 </html>

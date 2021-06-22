@@ -24,10 +24,10 @@
           </div>
         </div>
         <div class="row block-9">
-          <div class="col-md-6 align-items-center" style="background-image: url(<?=base_url()?>assets/user/img/logo.png);"> 
+          <div class="col-md-6 align-items-center" style="background-image: url(<?= base_url() ?>assets/user/img/logo.png);"> 
           </div>
           <div class="col-md-5 order-md-last d-flex">
-            <form action="<?=site_url('kotakmasuk/proses')?>" class="bg-white p-7 contact-form" method="post">
+            <form action="<?= site_url("kotakmasuk/proses") ?>" class="bg-white p-7 contact-form" method="post">
             <p>Anda dapat menghubungi kami melalui kotak pesan di bawah ini</p>
             <br>
               <div class="form-group">

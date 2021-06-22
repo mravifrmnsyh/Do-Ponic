@@ -12,7 +12,7 @@
 	          <div class="pb-md-5">
 	          	<p>do Ponic adalah komunitas pertanian yang bertujuan untuk memajukan pertanian di Indonesia dan sebagai upaya menghasilkan hasil pertanian yang berkualitas tinggi.</p>
 							<p>Sebagai bentuk upaya kami dalam mewujudkan tujuan tersebut, kami berusaha untuk memberikan cara pengelolaan hingga mendistribusikan hasil pertanian berkualitas tinggi ke seluruh Indonesia.</p>
-                            <p>Selain itu, do Ponic berupaya mengembangkan sistem sebagai layanan petani untuk menjual dan mendistribusikan hasil produk mereka ke seluruh Indonesia dengan memberikan fitur jual beli.</p>
+              <p>Selain itu, do Ponic berupaya mengembangkan sistem sebagai layanan petani untuk menjual dan mendistribusikan hasil produk mereka ke seluruh Indonesia dengan memberikan fitur jual beli.</p>
 							<p>Selain produk mentah, komunitas kami memberikan cara pengelolaan hasil pertanian menjadi produk matang seperti makanan atau produk lain.</p>
 						</div>
 					</div>

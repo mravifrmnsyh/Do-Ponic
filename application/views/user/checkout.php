@@ -8,7 +8,9 @@
 	          		<div class="col-md-12">
 	                <div class="form-group">
 	                	<label for="nama">Nama Lengkap</label>
-	                  <input type="text" class="form-control" placeholder="<?=ucfirst($this->fungsi->user_login()->nama)?>">
+	                  <input type="text" class="form-control" placeholder="<?= ucfirst(
+                       $this->fungsi->user_login()->nama
+                   ) ?>">
 	                </div>
 	              </div>
                 <div class="w-100"></div>
@@ -67,7 +69,7 @@
                       <h3>Total Biaya</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></span>
+    						<span>Rp. <?= number_format($this->cart->total(), 0, ",", ".") ?></span>
     					</p>
     					<p class="d-flex">
     						<span>Biaya Kirim</span>
@@ -80,7 +82,7 @@
     					<hr>
     					<p class="d-flex">
     						<span>Total</span>
-    						<span><a>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></a></span>
+    						<span><a>Rp. <?= number_format($this->cart->total(),0,",",".") ?></a></span>
     					</p>
     				</div>
 	          	</div>

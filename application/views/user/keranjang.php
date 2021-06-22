@@ -1,4 +1,4 @@
- <section class="ftco-section ftco-degree-bg">
+<section class="ftco-section ftco-degree-bg">
     <div class="container">
         <div class="row">
         <div class="col-lg-12 ftco-animate">
@@ -14,29 +14,29 @@
 						        <th>Total</th>
 						      </tr>
 						    </thead>
-                            <?php foreach ($this->cart->contents() as $items):?>
+                            <?php foreach ( $this->cart->contents() as $items): ?>
 						    <tbody>
 						      <tr class="text-center">
-						        <td class="product-remove"><a href="<?=site_url('katalog/hapusProduk/'.$items['rowid']);?>"><span class="ion-ios-close"></span></a></td>
+						        <td class="product-remove"><a href="<?= site_url("katalog/hapusProduk/" . $items["rowid"]) ?>"><span class="ion-ios-close"></span></a></td>
 						        
 						        <td class="product-name">
-						        	<h3><?= $items['name'] ?></h3>
+						        	<h3><?= $items["name"] ?></h3>
 						        </td>
 						        
-						        <td class="price">Rp. <?= number_format($items['price'],0,',','.') ?></td>
+						        <td class="price">Rp. <?= number_format($items["price"],0,",",".") ?></td>
 						        
 						        <td class="quantity">
-                                    <?= $items['qty'] ?>
+                                    <?= $items["qty"] ?>
 					          </td>
 						        
-						        <td class="total">Rp. <?= number_format($items['subtotal'] ,0,',','.') ?></td>
+						        <td class="total">Rp. <?= number_format($items["subtotal"],0,",",".") ?></td>
 						      </tr><!-- END TR-->
 
 						    </tbody>
-                            <?php endforeach ?>
+                            <?php endforeach; ?>
 						  </table>
-							<?php if ($this->cart->total_items() == 0){}else{?>
-						  <p><a href="<?=site_url('katalog/hapusKeranjang');?>" class="btn btn-primary py-3 px-4">Hapus Semua Produk</a></p>
+							<?php if ($this->cart->total_items() == 0) { } else { ?>
+						  <p><a href="<?= site_url("katalog/hapusKeranjang") ?>" class="btn btn-primary py-3 px-4">Hapus Semua Produk</a></p>
 							<?php } ?>
 					  <!-- </div> -->
     			<!-- </div> -->
@@ -85,7 +85,7 @@
     					<h3>Total Biaya</h3>
     					<p class="d-flex">
     						<span>Subtotal</span>
-    						<span>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></span>
+    						<span>Rp. <?= number_format($this->cart->total(), 0, ",", ".") ?></span>
     					</p>
     					<p class="d-flex">
     						<span>Biaya Kirim</span>
@@ -98,14 +98,14 @@
     					<hr>
     					<p class="d-flex">
     						<span>Total</span>
-    						<span><a>Rp. <?= number_format($this->cart->total() ,0,',','.') ?></a></span>
+    						<span><a>Rp. <?= number_format($this->cart->total(),0,",",".") ?></a></span>
     					</p>
     				</div>
-					<?php if($this->fungsi->user_login() == null){?>
-						<p><a href="<?=site_url('auth/login/')?>" id="byr" class="btn btn-primary py-3 px-4">Bayar</a></p>
+					<?php if ($this->fungsi->user_login() == null) { ?>
+						<p><a href="<?= site_url("auth/login/") ?>" id="byr" class="btn btn-primary py-3 px-4">Bayar</a></p>
 					<?php } else { ?>
-						<p><a href="<?=site_url('katalog/checkout/')?>" class="btn btn-primary py-3 px-4">Bayar</a></p>
-					<?php }?>
+						<p><a href="<?= site_url("katalog/checkout/") ?>" class="btn btn-primary py-3 px-4">Bayar</a></p>
+					<?php } ?>
 				</div>
     		</div>
 			</div>  
