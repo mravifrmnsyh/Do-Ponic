@@ -59,8 +59,8 @@ class Katalog extends CI_Controller {
 		$this->load->model('invoice_model');
 		$proses = $this->invoice_model->index();
 		if($proses){
-			// $this->cart->destroy();
-			redirect('invoice');
+			$this->cart->destroy();
+			redirect('user_dashboard');
 		} else{
 			redirect('katalog/chechout');
 		}

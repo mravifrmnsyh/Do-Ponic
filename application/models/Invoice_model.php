@@ -21,7 +21,7 @@ class Invoice_model extends CI_Model {
             $data = array(
                 'id_invoice'    =>  $id_invoice,
                 'id_brg'        => $item['id'],
-                'nama_brg'      => $item['nama'],
+                'nama_brg'      => $item['name'],
                 'jumlah'        => $item['qty'],
                 'harga'         => $item['price'],
             );
@@ -37,5 +37,32 @@ class Invoice_model extends CI_Model {
         }else{
             return false;
         }
+    }
+
+    public function ambilIdInv($id){
+        $result = $this->db->where('id_inv', $id)->limit(1)->get('tb_invoice');
+        if($result->num_rows()>0){
+            return $result->row();
+        }else{
+            return false;
+        }
+    }
+    
+    public function ambilIdPes($id){
+        $result = $this->db->where('id_invoice', $id)->get('tb_pesanan');
+        if($result->num_rows()>0){
+            return $result->result();
+        }else{
+            return false;
+        }
+    }
+
+    public function jumlahInv(){
+        $query = $this->db->get('tb_invoice');
+        if($query->num_rows()>0){
+            return $query->num_rows();
+        } else {
+            return 0;
+        } 
     }
 }

@@ -30,7 +30,7 @@
                                 <td><?=$inv->tgl_pesan?></td>
                                 <td><?=$inv->batas_byr?></td> 
                                 <td class="text-center" width="150px">
-                                    <a href="<?=site_url('artikel/ubah/'.$inv->id_inv)?>" class="btn btn-success btn-xs">
+                                    <a href="<?=site_url('invoice/detail/'.$inv->id_inv)?>" class="btn btn-success btn-xs">
                                         <i class="fa fa-pencil"> Detail</i>
                                     </a>
                                     </a>

@@ -62,7 +62,7 @@
 						<span class="info-box-icon bg-aqua"><i class="fa fa-folder-open"></i></span>
 						<div class="info-box-content">
 							<span class="info-box-text">Invoice</span>
-							<span class="info-box-number"><?= $brg?></span>
+							<span class="info-box-number"><?= $inv?></span>
 						</div>
 					</div>
 				</div>
