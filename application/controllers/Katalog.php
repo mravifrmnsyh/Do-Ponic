@@ -54,4 +54,15 @@ class Katalog extends CI_Controller {
 	public function checkout(){
 		$this->template->load('user/theme', 'user/checkout');
 	}
+
+	public function prosesBayar(){
+		$this->load->model('invoice_model');
+		$proses = $this->invoice_model->index();
+		if($proses){
+			// $this->cart->destroy();
+			redirect('invoice');
+		} else{
+			redirect('katalog/chechout');
+		}
+	}
 }

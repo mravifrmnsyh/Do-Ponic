@@ -26,7 +26,7 @@ class Barang extends CI_Controller {
 
         $this->barang_model->del($id);
 		$error = $this->db->error();
-		if($error != 0){
+		if($error['code'] != 0){
 			$this->session->set_flashdata('gagal', 'Data tidak dapat dihapus(sudah berelasi)');
 		}else {
 			$this->session->set_flashdata('success', 'Data berhasil dihapus');

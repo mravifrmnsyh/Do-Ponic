@@ -22,7 +22,7 @@ class Profil extends CI_Controller {
 		$config['allowed_types']        = 'jpeg|jpg|png';
 		$config['max_size']             = 2048;
 		$this->load->library('upload', $config);
-		$post['level'] = 2;
+		$post['level'] = $this->fungsi->user_login()->level == 1 ? 1 : 2 ;
 		$post['id_user'] = $id;
 		
 		if($_FILES['foto']['name']!=null){

@@ -20,7 +20,7 @@ class Supplier extends CI_Controller {
     public function hapus($id){
         $this->supplier_model->del($id);
         $error = $this->db->error();
-		if($error != 0){
+		if($error['code'] != 0){
 			$this->session->set_flashdata('gagal', 'Data tidak dapat dihapus(sudah berelasi)');
 		}else {
 			$this->session->set_flashdata('success', 'Data berhasil dihapus');
