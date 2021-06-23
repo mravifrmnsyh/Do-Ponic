@@ -153,11 +153,11 @@
     <!-- /.content-wrapper -->
 
     
-  <section class="ftco-section img" style="background-image: url(<?= base_url() ?>assets/user/img/;">
+  <section class="ftco-section img" style="background-image: url(<?= base_url() ?>assets/user/img/promo.jpg);">
       <div class="container">
               <div class="row justify-content-end">
         <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-            <span class="subheading">Promo Pak Tani</span>
+            <span class="subheading" >Promo Pak Tani</span>
           <h2 class="mb-4">Gratis Ongkir ke Seluruh Indonesia</h2>
           <p>Untuk Setiap Pembelian di website do Ponic</p>
       </div>   		
