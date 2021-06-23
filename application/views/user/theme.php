@@ -58,7 +58,7 @@
 	<div class="col-lg-10 col-sm-6 col-12">
 		<div class="widgets-wrap float-md-right">
 			<div class="widget-header  mr-3">
-				<a href="<?=site_url('katalog/detailKeranjang');?>" class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-cart"></i></a>
+				<a href="<?=site_url('katalog/detailKeranjang');?>" class="icon icon-sm rounded-circle border"><i class="icon-shopping_cart"></i></a>
 				<span class="badge badge-pill badge-danger notify"><?=$this->cart->total_items();?> </span>        
 			</div>
 			<div class="widget-header icontext">
