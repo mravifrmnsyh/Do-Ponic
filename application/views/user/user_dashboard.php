@@ -24,7 +24,7 @@
     <div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section ftco-animate">
-            <h2 class="subheading text-right">PRODUK TERBARU</h2>
+            <a href="<?=base_url(); ?>katalog" ><h2 class="subheading text-right">LIHAT SEMUA  PRODUK</h2></a>
             <hr>
           </div>
         </div>   		
@@ -64,7 +64,7 @@
     <div class="container">
 				<div class="row justify-content-center mb-3 pb-3">
           <div class="col-md-12 heading-section ftco-animate">
-            <h2 class="subheading text-right">ARTIKEL TERBARU</h2>
+            <a  href="<?=base_url(); ?>blog"><h2 class="subheading text-right">LIHAT SEMUA ARTIKEL</h2></a>
             <hr>
           </div>
         </div>   		

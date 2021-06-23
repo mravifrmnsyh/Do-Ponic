@@ -1,12 +1,12 @@
-<section class="ftco-degree-bg">
+<section class="ftco-section ftco-degree-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 ftco-animate">
         <div class="text d-block pl-md-4">
           <?php foreach($row as $contents):?>
-            <img src="<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>"  style="padding:10px;width:400px;height: 300px;" alt="" class="img-fluid">
+            <img src="<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>"  style="width:100%;height: 300px;" alt="" class="img-fluid">
             <div class="row">
-              <h2 class="mb-2"><?php echo $contents->judul ?></h2>
+              <h2 class="text-center"><?php echo $contents->judul ?></h2>
               <div class="meta mb-3">
                 <p style="text-align:justify;">
                   <?php echo $this->typography->nl2br_except_pre($contents->deskripsi); ?>
@@ -18,7 +18,7 @@
       </div>
       <div class="col-lg-4 sidebar ftco-animate">
         <div class="sidebar-box ftco-animate">
-          <h3 class="heading">Recent Blog</h3>
+          <h3 class="heading">Artikel Terbaru</h3>
             <?php $i=0;  foreach($desc->result() as $contents):?>
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(<?php echo base_url().'/assets/gambar/artikel/'.$contents->gambar ?>);"></a>
