@@ -147,9 +147,6 @@
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-        </div>
     </section>
 
 
@@ -163,7 +160,7 @@
     <!-- /.content-wrapper -->
 
 
-    <section class="ftco-section img" style="background-image: url(<?= base_url() ?>assets/user/img/bg.jpg;">
+    <section class="ftco-section img" style="background-image: url(<?= base_url() ?>assets/user/img/bg.jpg);">
         <div class="container">
             <div class="row justify-content-end">
                 <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
@@ -172,6 +169,7 @@
                     <p>Untuk Setiap Pembelian di website do Ponic</p>
                 </div>
             </div>
+        </div>
     </section>
 
     <footer class="ftco-footer ftco-section">
