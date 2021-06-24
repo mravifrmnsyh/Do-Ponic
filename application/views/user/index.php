@@ -67,8 +67,8 @@
                         </div>
                         <div class="widget-header icontext">
                             <?php if (
-            $this->fungsi->user_login() == null or
-            $this->fungsi->user_login()->foto == null) { ?>
+                            $this->fungsi->user_login() == null or
+                            $this->fungsi->user_login()->foto == null) { ?>
                             <a href="<?= site_url("profil") ?>" class="icon icon-sm rounded-circle border">
                                 <i class="fa fa-user"></i>
                             </a>
