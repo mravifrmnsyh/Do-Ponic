@@ -71,7 +71,7 @@ class Artikel extends CI_Controller {
 	public function proses(){
 		$config['upload_path']          = './assets/gambar/artikel';
 		$config['allowed_types']        = 'jpeg|jpg|png';
-		$config['max_size']             = 2048;
+		$config['max_size']             = 5000;
 		$this->load->library('upload', $config);
 		
 		$post = $this->input->post(null, TRUE);

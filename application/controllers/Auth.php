@@ -81,7 +81,7 @@ class Auth extends CI_Controller {
 				$this->load->model('user_model');
 				$config['upload_path']          = './assets/gambar/user';
 				$config['allowed_types']        = 'jpeg|jpg|png';
-				$config['max_size']             = 2048;
+				$config['max_size']             = 5000;
 				$this->load->library('upload', $config);
 				
 				if($_FILES['foto']['name']!=null){

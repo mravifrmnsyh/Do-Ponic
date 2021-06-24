@@ -34,7 +34,7 @@ class Users extends CI_Controller {
 
 		$config['upload_path']          = './assets/gambar/user';
 		$config['allowed_types']        = 'jpeg|jpg|png';
-		$config['max_size']             = 2048;
+		$config['max_size']             = 5000;
 		$this->load->library('upload', $config);
 
 		if($this->form_validation->run()==FALSE){
@@ -85,7 +85,7 @@ class Users extends CI_Controller {
 
 		$config['upload_path']          = './assets/gambar/user';
 		$config['allowed_types']        = 'jpeg|jpg|png';
-		$config['max_size']             = 2048;
+		$config['max_size']             = 5000;
 		$this->load->library('upload', $config);
 		
 		$post = $this->input->post(null, TRUE);

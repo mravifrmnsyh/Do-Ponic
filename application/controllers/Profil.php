@@ -20,7 +20,7 @@ class Profil extends CI_Controller {
 		$post = $this->input->post(null, TRUE);
 		$config['upload_path']          = './assets/gambar/user';
 		$config['allowed_types']        = 'jpeg|jpg|png';
-		$config['max_size']             = 2048;
+		$config['max_size']             = 5000;
 		$this->load->library('upload', $config);
 		$post['level'] = $this->fungsi->user_login()->level == 1 ? 1 : 2 ;
 		$post['id_user'] = $id;
