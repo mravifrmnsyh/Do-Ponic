@@ -58,7 +58,7 @@ class Auth extends CI_Controller {
 						title : 'Berhasil',
 						text : 'Login Berhasil'
 						}).then((result) => {
-						window.location='<?=site_url('dashboard')?>';
+						window.location='<?=site_url('user_dashboard')?>';
 					})
 					</script>
 					<?php

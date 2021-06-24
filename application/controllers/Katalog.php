@@ -57,10 +57,32 @@ class Katalog extends CI_Controller {
 
 	public function prosesBayar(){
 		$this->load->model('invoice_model');
+		?>
+		<script src="<?=base_url()?>assets/dist/js/sweet/sweetalert2.all.min.js"></script>
+		<style>
+		body{
+			font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size : 1.124sm;
+			font-weight : normal; 
+		}
+		</style>
+		<body></body>
+		
+		<?php
 		$proses = $this->invoice_model->index();
 		if($proses){
 			$this->cart->destroy();
-			redirect('user_dashboard');
+			?>
+			<script>
+			Swal.fire({
+				icon : 'success',
+				title : 'Pesanan Berhasil',
+				text : 'Pesanan berhasil terkirim, admin akan menghubungi dalam 1x24jam'
+				}).then((result) => {
+				window.location='<?=site_url('user_dashboard')?>';
+			})
+			</script>
+			<?php
 		} else{
 			redirect('katalog/chechout');
 		}

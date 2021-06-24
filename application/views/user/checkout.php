@@ -86,28 +86,28 @@
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Bank BRI</label>
+                                        <label><input type="radio" name="optradio" value="bri" class="mr-2"> Bank BRI</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Bank BNI</label>
+                                        <label><input type="radio" name="optradio" value="bni" class="mr-2"> Bank BNI</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="radio">
-                                        <label><input type="radio" name="optradio" class="mr-2"> Alfamart</label>
+                                        <label><input type="radio" name="optradio" value="alfamart" class="mr-2"> Alfamart</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-12">
                                     <div class="checkbox">
-                                        <label><input type="checkbox" value="" class="mr-2"> Saya telah membaca dan
+                                        <label><input type="checkbox" value="" class="mr-2" required> Saya telah membaca dan
                                             menerima syarat dan ketentuan</label>
                                     </div>
                                 </div>

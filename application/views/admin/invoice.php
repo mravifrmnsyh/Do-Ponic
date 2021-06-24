@@ -13,6 +13,9 @@
                         <th>ID</th>
                         <th>Nama</th>
                         <th>Alamat</th>
+                        <th>No Hp</th>
+                        <th>Email</th>
+                        <th>Pembayaran</th>
                         <th>TANGGAL PESANAN</th>
                         <th>BATAS BAYAR</th>
                         <th>AKSI</th>
@@ -26,6 +29,9 @@
                         <td><?=$inv->id_inv?></td>
                         <td><?=$inv->nama?></td>
                         <td><?=$inv->alamat?></td>
+                        <td><?=$inv->no?></td>
+                        <td><?=$inv->email?></td>
+                        <td><?=$inv->via?></td>
                         <td><?=$inv->tgl_pesan?></td>
                         <td><?=$inv->batas_byr?></td>
                         <td class="text-center" width="150px">

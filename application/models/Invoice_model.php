@@ -7,10 +7,16 @@ class Invoice_model extends CI_Model {
         date_default_timezone_set('Asia/Jakarta');
         $nama = $this->input->post('nama');
         $alamat = $this->input->post('alamat');
+        $no = $this->input->post('hp');
+        $email = $this->input->post('email');
+        $via = $this->input->post('optradio');
 
         $invoice = array (
             'nama'      =>  $nama,
             'alamat'    =>  $alamat,
+            'no'        =>  $no,
+            'email'     =>  $email,
+            'via'       =>  $via,
             'tgl_pesan' =>  date('Y-m-d H:i:s'),
             'batas_byr' =>  date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d')+1, date('Y'))),
         );
