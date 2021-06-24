@@ -27,7 +27,7 @@
                 <div class="row mt-4">
                     <div class="w-100"></div>
                 </div>
-                <?php echo anchor("katalog/tambahKeranjang/" . $contens->id_brg,'<div class="btn btn-black py-3 px-5">Tambah ke Keranjang</div>'); ?>
+                <?php echo anchor("katalog/tambahKeranjangDet/" . $contens->id_brg,'<div class="btn btn-black py-3 px-5">Tambah ke Keranjang</div>'); ?>
                 <?php endforeach;?>
             </div>
         </div>
