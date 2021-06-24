@@ -29,113 +29,6 @@
 
         <section class="ftco-section">
             <div class="container">
-                <div class="row justify-content-center mb-3 pb-3">
-                    <div class="col-md-12 heading-section ftco-animate">
-                        <a href="<?=base_url(); ?>katalog">
-                            <h2 class="subheading text-right">LIHAT SEMUA PRODUK</h2>
-                        </a>
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <?php  $i=0;  foreach ($barang->result() as $brg):
-                        if($brg->kategori=='alat'){?>
-                            <div class="col-md-6 col-lg-3 ftco-animate">
-                                <div class="product">
-                                    <a href="#" class="img-prod"><img class="img-fluid"
-                                            src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
-                                            style="width:250px;height:260px">
-                                    </a>
-                                    <div class="text py-3 pb-4 px-3 text-center">
-                                        <h3><?php echo $brg->nama_brg ?></h3>
-                                        <div class="d-flex">
-                                            <div class="pricing">
-                                                <p class="price"><span class="price-sale">Rp.
-                                                        <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom-area d-flex px-3">
-                                            <div class="m-auto d-flex">
-                                                <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
-                                                    class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                    <span><i class="ion-ios-menu"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php $i++; if($i==4){break;}; }endforeach;?>
-                        </div>
-                        <div class="row">
-                    <?php  $i=0;  foreach ($barang->result() as $brg):
-                        if($brg->kategori=='benih'){?>
-                            <div class="col-md-6 col-lg-3 ftco-animate">
-                                <div class="product">
-                                    <a href="#" class="img-prod"><img class="img-fluid"
-                                            src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
-                                            style="width:250px;height:260px">
-                                    </a>
-                                    <div class="text py-3 pb-4 px-3 text-center">
-                                        <h3><?php echo $brg->nama_brg ?></h3>
-                                        <div class="d-flex">
-                                            <div class="pricing">
-                                                <p class="price"><span class="price-sale">Rp.
-                                                        <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom-area d-flex px-3">
-                                            <div class="m-auto d-flex">
-                                                <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
-                                                    class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                    <span><i class="ion-ios-menu"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    <?php $i++; if($i==4){break;}; }endforeach;?>
-                    </div>
-                        <div class="row">
-                    <?php  $i=0;  foreach ($barang->result() as $brg):
-                        if($brg->kategori=='buah'){?>
-                            <div class="col-md-6 col-lg-3 ftco-animate">
-                                <div class="product">
-                                    <a href="#" class="img-prod"><img class="img-fluid"
-                                            src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
-                                            style="width:250px;height:260px">
-                                    </a>
-                                    <div class="text py-3 pb-4 px-3 text-center">
-                                        <h3><?php echo $brg->nama_brg ?></h3>
-                                        <div class="d-flex">
-                                            <div class="pricing">
-                                                <p class="price"><span class="price-sale">Rp.
-                                                        <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
-                                            </div>
-                                        </div>
-                                        <div class="bottom-area d-flex px-3">
-                                            <div class="m-auto d-flex">
-                                                <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
-                                                    class="add-to-cart d-flex justify-content-center align-items-center text-center">
-                                                    <span><i class="ion-ios-menu"></i></span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    <?php $i++; if($i==4){break;}; }endforeach;?>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
                 <div class="container">
                     <div class="row justify-content-center mb-3 pb-3">
                         <div class="col-md-12 heading-section ftco-animate">
@@ -172,4 +65,111 @@
                         <?php $i++; if($i==2){break;}; endforeach;?>
                     </div>
                 </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="row justify-content-center mb-3 pb-3">
+                    <div class="col-md-12 heading-section ftco-animate">
+                        <a href="<?=base_url(); ?>katalog">
+                            <h2 class="subheading text-right">LIHAT SEMUA PRODUK</h2>
+                        </a>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <?php  $i=0;  foreach ($barang->result() as $brg):
+                        if($brg->kategori=='alat'){?>
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="product">
+                            <a href="#" class="img-prod"><img class="img-fluid"
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
+                                    style="width:250px;height:260px">
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><?php echo $brg->nama_brg ?></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span class="price-sale">Rp.
+                                                <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
+                                            class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                            <span><i class="ion-ios-menu"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $i++; if($i==4){break;}; }endforeach;?>
+                </div>
+                <div class="row">
+                    <?php  $i=0;  foreach ($barang->result() as $brg):
+                        if($brg->kategori=='benih'){?>
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="product">
+                            <a href="#" class="img-prod"><img class="img-fluid"
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
+                                    style="width:250px;height:260px">
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><?php echo $brg->nama_brg ?></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span class="price-sale">Rp.
+                                                <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
+                                            class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                            <span><i class="ion-ios-menu"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $i++; if($i==4){break;}; }endforeach;?>
+                </div>
+                <div class="row">
+                    <?php  $i=0;  foreach ($barang->result() as $brg):
+                        if($brg->kategori=='buah'){?>
+                    <div class="col-md-6 col-lg-3 ftco-animate">
+                        <div class="product">
+                            <a href="#" class="img-prod"><img class="img-fluid"
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic"
+                                    style="width:250px;height:260px">
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><?php echo $brg->nama_brg ?></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span class="price-sale">Rp.
+                                                <?php echo number_format($brg->harga, 0,',','.') ?></span></p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <a href="<?=site_url('katalog/detail/'.$brg->id_brg)?>"
+                                            class="add-to-cart d-flex justify-content-center align-items-center text-center">
+                                            <span><i class="ion-ios-menu"></i></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $i++; if($i==4){break;}; }endforeach;?>
+                </div>
+
+            </div>
+            </div>
         </section>
