@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <?php } endforeach; ?>
+                <?php $i++; if($i==4){break;};} endforeach; ?>
             </div>
         </div>
 </section>
