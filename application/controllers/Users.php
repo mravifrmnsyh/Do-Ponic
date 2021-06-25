@@ -20,15 +20,14 @@ class Users extends CI_Controller {
 	public function tambah(){
 
 		$this->form_validation->set_rules('nama', 'Nama', 'required');
-		$this->form_validation->set_rules('username', 'Username', 'required|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[5]');
-		$this->form_validation->set_rules('password1', 'Password Kofirmasi', 'required|matches[password]',
+		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password1', 'Password Konfirmasi', 'required|matches[password]',
 			array('matches' => '%s tidak sesuai dengan password')
 		);
 		$this->form_validation->set_rules('level', 'Level', 'required');
 
 		$this->form_validation->set_message('required', '%s tidak boleh kosong');
-		$this->form_validation->set_message('min_length', '%s minimal 5 karakter');
 
 		$this->form_validation->set_error_delimiters('<span class="help-block">', '</span>');
 
