@@ -21,6 +21,7 @@
                     <div class="product">
                         <a href="#" class="img-prod"><img class="img-fluid"
                                 src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
+                            <div class="overlay"></div>
                         </a>
                         <div class="text py-3 pb-4 px-3 text-center">
                             <h3><?php echo $brg->nama_brg ?></h3>
