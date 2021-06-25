@@ -85,8 +85,8 @@
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="product">
                             <a href="#" class="img-prod"><img class="img-fluid"
-                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
-                                <div class="overlay"></div>
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>"
+                                    style="height:260px;" alt="doPonic">
                             </a>
                             <div class="text py-3 pb-4 px-3 text-center">
                                 <h3><?php echo $brg->nama_brg ?></h3>
@@ -115,8 +115,8 @@
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="product">
                             <a href="#" class="img-prod"><img class="img-fluid"
-                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
-                                <div class="overlay"></div>
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>"
+                                    style="height:260px;" alt="doPonic">
                             </a>
                             <div class="text py-3 pb-4 px-3 text-center">
                                 <h3><?php echo $brg->nama_brg ?></h3>
@@ -145,8 +145,8 @@
                     <div class="col-md-6 col-lg-3 ftco-animate">
                         <div class="product">
                             <a href="#" class="img-prod"><img class="img-fluid"
-                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>" alt="doPonic">
-                                <div class="overlay"></div>
+                                    src="<?php echo base_url().'/assets/gambar/barang/'.$brg->gambar ?>"
+                                    style="height:260px;" alt="doPonic">
                             </a>
                             <div class="text py-3 pb-4 px-3 text-center">
                                 <h3><?php echo $brg->nama_brg ?></h3>
