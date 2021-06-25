@@ -45,8 +45,8 @@
                 <li class="nav-item"><a href="<?= site_url("mitra") ?>" class="nav-link"> Mitra </a></li>
                 <li class="nav-item"><a href="<?= site_url("katalog") ?>" class="nav-link"> Katalog </a></li>
                 <li class="nav-item"><a href="<?= site_url("kontak") ?>" class="nav-link"> Kontak </a></li>
-                <li class="nav-item"><a href="#" class="nav-link"> Indonesian </a></li>
-            </ul> <!-- list-inline //  -->
+            </ul>
+            <!-- list-inline //  -->
         </div> <!-- navbar-collapse .// -->
         </div> <!-- container //  -->
     </nav> <!-- header-top-light.// -->
